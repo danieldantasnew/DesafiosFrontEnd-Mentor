@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+img{
+    max-width: 100%;
+}
+
 :root{
     --laranja: hsl(25, 97%, 53%);
     --branco: hsl(0, 0%, 100%);
@@ -20,9 +24,10 @@ body{
     font-size: 15px;
     background-color: var(--azul-mtescuro);
 }
+ /* PAGINA INICIAL DE AVALIAÇÃO */
 
 .container-card{
-    background-color: var(--azul-escuro);
+    background: linear-gradient(145deg, hsl(213, 29%, 15%), hsl(212, 31%, 10%));
     margin: auto;
     height: 400px;
     width: 400px;
@@ -30,10 +35,110 @@ body{
     border-radius: 25px;
 }
 
+.bg-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+    gap: 2.3rem;
+}
+
+.bg-img{
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background-color: var(--azul-escuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.bg-img img{
+    height: 13px;
+    width: 13px;
+}
+
 .container-card h2{
     color: var(--branco);
 }
 
 .container-card p{
+    margin-top: 10px;
     color: var(--cinza-claro);
+    line-height: 1.4rem;
+}
+
+.avaliation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bg-numbers{
+    cursor: pointer;
+    height: 2.6rem;
+    width: 2.6rem;
+    border-radius: 50%;
+    background-color: var(--azul-escuro);
+    font-size: 13px;
+    color: var(--cinza-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-numbers:hover{
+    background-color: var(--cinza-medio);
+    color: var(--branco);
+}
+
+.botao-submit{
+    cursor: pointer;
+    padding: 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background-color: var(--laranja);
+    color: var(--branco);
+    border: none;
+}
+
+.botao-submit:hover{
+    background-color: var(--branco);
+    color: var(--laranja);
+}
+
+/* PÁGINA THANK YOU */
+
+.bg-container-thank{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.pt-1{
+    margin-top: 3em;
+}
+
+#bg-para{
+    background-color: var(--azul-escuro);
+    color: var(--laranja);
+    font-size: 12px;
+    border-radius: 15px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pt-2{
+    margin-top: 2em;
 }
