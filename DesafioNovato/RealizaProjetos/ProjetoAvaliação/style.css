@@ -82,6 +82,7 @@ body{
     height: 2.6rem;
     width: 2.6rem;
     border-radius: 50%;
+    font-weight: 600;
     background-color: var(--azul-escuro);
     font-size: 13px;
     color: var(--cinza-claro);
