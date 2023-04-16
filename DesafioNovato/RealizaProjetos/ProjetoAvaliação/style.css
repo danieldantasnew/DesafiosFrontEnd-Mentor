@@ -96,6 +96,11 @@ body{
     color: var(--branco);
 }
 
+.bg-numbers.ativo{
+    background-color: var(--laranja);
+    color: var(--branco);
+}
+
 .botao-submit{
     cursor: pointer;
     padding: 14px;
