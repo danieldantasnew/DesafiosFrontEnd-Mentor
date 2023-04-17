@@ -15,8 +15,8 @@ function mudaCor(){
     hover.forEach((numero) => {
         numero.addEventListener('click', mudaBG);
     });
-
-    
 }
 
 mudaCor();
+
+/*RESTA APENAS FAZER UM BACKEND QUE RECEBA O VALOR DA VARIÁVEL RECEBENOTA E ARMANEZAR NUM BANCO DE DADOS OU SIMPLESMENTE PASSAR O VALOR PARA A OUTRA PÁGINA E MOSTRAR. DÁ PARA FAZER ISSO COM PHP.*/
