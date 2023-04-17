@@ -5,18 +5,19 @@ function mudaCor(){
     function mudaBG(){
         if(this.classList.contains('ativo')){
             this.classList.remove('ativo');
+            recebeNota = 0; //Se nota é igual a 0 então não deixar clicar no submit.
         }
-
         else{
             hover.forEach((numero) =>{
                 numero.classList.remove('ativo');
             });
-            
+
             this.classList.add('ativo');
+
+            let converteNota = parseInt(this.textContent);
+            recebeNota = converteNota;
         }
 
-        let converteNota = parseInt(this.textContent);
-        recebeNota = converteNota;
     }
 
     hover.forEach((numero) => {
