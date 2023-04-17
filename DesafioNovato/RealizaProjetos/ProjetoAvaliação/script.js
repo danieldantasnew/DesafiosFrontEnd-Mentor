@@ -3,10 +3,17 @@ var recebeNota;
 function mudaCor(){
     const hover = document.querySelectorAll('.bg-numbers');
     function mudaBG(){
-        hover.forEach((numero) =>{
-            numero.classList.remove('ativo');
-        })
-        this.classList.add('ativo');
+        if(this.classList.contains('ativo')){
+            this.classList.remove('ativo');
+        }
+
+        else{
+            hover.forEach((numero) =>{
+                numero.classList.remove('ativo');
+            });
+            
+            this.classList.add('ativo');
+        }
 
         let converteNota = parseInt(this.textContent);
         recebeNota = converteNota;
