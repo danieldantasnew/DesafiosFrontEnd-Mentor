@@ -58,6 +58,12 @@ body{
     color: var(--cinza-medio-escuro);
 }
 
+/*Faz o spinner desaparecer Spinner é o indicador que aumenta ou diminui o número no input Number*/
+
+input[type = "number"]::-webkit-inner-spin-button, input[type = "number"]::-webkit-outer-spin-button{
+    appearance: none;
+}
+
 .design-input{
     cursor: pointer;
     height: 40px;
@@ -77,6 +83,18 @@ body{
     font-size: 1rem;
     font-weight: 800;
 }
+
+/* .design-input:required:invalid{
+    border: 1px solid var(--vermelho-claro);
+    outline: none;
+}
+
+.design-input:required:invalid::before{
+    content: 'This field is required';
+    display: block;
+    font-size: 0.8em;
+    color: var(--vermelho-claro);
+} */
 
 .botao-enviar{   
     margin-bottom: 25px;
@@ -106,6 +124,10 @@ body{
 
 .botao-enviar button:hover{
     background-color: var(--preto-apagado);
+}
+
+.idade{
+    color: var(--roxo);
 }
 
 .show-info{
