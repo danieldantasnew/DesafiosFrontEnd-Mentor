@@ -1,37 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de Idade</title>
 </head>
 <body>
 
-  Day
-  DD
+    <section class="card">
+        <div class="input-data">
+            <form action="" class="organiza-form">
+                <div class="organiza-data">
+                    <label for="dia">Dia</label>
+                    <input class = "design-input" type="number" id="dia" placeholder="DD" required>
+                </div>
+                
+                <div class="organiza-data">
+                    <label for="mes">Mês</label>
+                    <input class = "design-input" type="number" id="mes" placeholder="MM" required>
+                </div>
+                
+                <div class="organiza-data">
+                    <label for="ano">Ano</label>
+                    <input class = "design-input" type="number" id="ano" placeholder="YYYY" required>
+                </div>
+            </form>
+        </div>
 
-  Month
-  MM
+        <div class="botao-enviar">
+            <button type="submit"></button>
+        </div>
 
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <div class="show-info">
+            <h1 class="anos">texto padrao</h1>
+            <h1 class="meses">texto padrao</h1>
+            <h1 class="dias">texto padrao</h1>
+        </div>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>

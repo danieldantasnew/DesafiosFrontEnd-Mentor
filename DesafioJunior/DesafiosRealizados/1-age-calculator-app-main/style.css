@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*PRIMÁRIA*/
+    --roxo: hsl(259, 100%, 65%);
+    --vermelho-claro: hsl(0, 100%, 67%);
+
+    /*SECUNDÁRIA*/
+
+    --branca: hsl(0, 0%, 100%);
+    --branco-apagado: hsl(0, 0%, 94%);
+    --cinza-claro: hsl(0, 0%, 86%);
+    --cinza-medio-escuro: hsl(0, 1%, 44%);
+    --preto-apagado: hsl(0, 0%, 8%);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: var(--branco-apagado);
+}
+
+.card{
+    height: 400px;
+    width: 600px;
+    background-color: var(--branca);
+    margin: 10vh auto;
+    border-radius: 12px 12px 8em 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-left: 2.2em;
+}
+
+.organiza-form{
+    display: flex;
+    gap: 20px;
+    margin-top: 3vh;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid var(--cinza-claro);
+}
+
+.organiza-data{
+    display: flex;
+    flex-direction: column;
+}
+
+.design-input{
+    height: 40px;
+    width: 80px;
+}
+
+.botao-enviar button{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: var(--roxo);
+    border: none;
+    background-image: url(assets/images/icon-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px;
+}
