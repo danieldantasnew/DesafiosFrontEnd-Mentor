@@ -28,8 +28,8 @@ body{
 }
 
 .card{
-    height: 400px;
-    width: 600px;
+    height: 360px;
+    width: 440px;
     background-color: var(--branca);
     margin: 10vh auto;
     border-radius: 12px 12px 8em 12px;
@@ -44,9 +44,8 @@ body{
 .organiza-form{
     display: flex;
     gap: 20px;
-    margin-top: 3vh;
-    padding-bottom: 2vh;
-    border-bottom: 1px solid var(--cinza-claro);
+    margin-top: 2.4vh;
+    padding-bottom: 6px;
 }
 
 .organiza-data{
@@ -54,9 +53,42 @@ body{
     flex-direction: column;
 }
 
+.organiza-data label{
+    font-size: 0.5em;
+    color: var(--cinza-medio-escuro);
+}
+
 .design-input{
+    cursor: pointer;
     height: 40px;
     width: 80px;
+    border: 1px solid var(--cinza-claro);
+    padding-left: 12px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 800;
+}
+
+.design-input:focus{ 
+    outline: 1px solid var(--roxo);
+}
+
+.design-input::placeholder{
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.botao-enviar{   
+    margin-bottom: 25px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#linha{
+    height: 1px;
+    width: 80%;
+    background-color: var(--branco-apagado);
 }
 
 .botao-enviar button{
@@ -65,8 +97,21 @@ body{
     border-radius: 50%;
     background-color: var(--roxo);
     border: none;
+    cursor: pointer;
     background-image: url(assets/images/icon-arrow.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 22px;
+}
+
+.botao-enviar button:hover{
+    background-color: var(--preto-apagado);
+}
+
+.show-info{
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 1.6em;
+    margin-bottom: 3vh;
 }
