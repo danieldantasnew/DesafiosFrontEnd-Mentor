@@ -11,8 +11,9 @@
 <body>
 
     <section class="card">
-        <div class="input-data">
-            <form action="" class="organiza-form">
+        
+        <form action="" class="input-data" autocomplete="on">
+            <div class="organiza-form">
                 <div class="organiza-data">
                     <label for="dia">DAY</label>
                     <input class = "design-input" type="number" id="dia" placeholder="DD" required>
@@ -27,13 +28,16 @@
                     <label for="ano">YEAR</label>
                     <input class = "design-input" type="number" id="ano" placeholder="YYYY" required>
                 </div>
-            </form>
-        </div>
+            </div>
 
-        <div class="botao-enviar">
-            <div id="linha"></div>
-            <button id ="botao-submit" type="submit"></button>
-        </div>
+            <div class="botao-enviar">
+                <div id="linha"></div>
+                <button id ="botao-submit" type="submit"></button>
+            </div>
+        </form>
+       
+
+
 
         <div class="show-info">
             <h1 class="anos"><strong class="idade">--</strong> years</h1>

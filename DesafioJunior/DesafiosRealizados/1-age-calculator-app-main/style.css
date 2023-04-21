@@ -41,6 +41,10 @@ body{
     padding-left: 2.2em;
 }
 
+.input-data{
+    width: 100%;
+}
+
 .organiza-form{
     display: flex;
     gap: 20px;
@@ -83,18 +87,6 @@ input[type = "number"]::-webkit-inner-spin-button, input[type = "number"]::-webk
     font-size: 1rem;
     font-weight: 800;
 }
-
-/* .design-input:required:invalid{
-    border: 1px solid var(--vermelho-claro);
-    outline: none;
-}
-
-.design-input:required:invalid::before{
-    content: 'This field is required';
-    display: block;
-    font-size: 0.8em;
-    color: var(--vermelho-claro);
-} */
 
 .botao-enviar{   
     margin-bottom: 25px;
