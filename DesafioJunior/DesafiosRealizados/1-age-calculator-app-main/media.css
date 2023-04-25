@@ -1,12 +1,45 @@
-@media (max-width: 400px){
+@media (max-width: 470px){
 
     body{
-        background-color: black;
         font-size: .5em;
     }
 
     .card{
-        height: 200px;
-        width: 200px;
+        max-height: 480px;
+        max-width: 300px;
+        padding: 0 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .organiza-form{
+        margin-top: 3vh;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .design-input{
+        max-width: 70px;
+    }
+
+    .botao-enviar{   
+        margin-top: 3vh;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .botao-enviar::before{
+        width: 38%;
+    }
+
+    .botao-enviar::after{
+        content: '';
+        height: 1px;
+        width: 38%;
+        background-color: var(--branco-apagado);
+    }
+
+    .show-info{
+        font-size: 1.8rem;
     }
 }

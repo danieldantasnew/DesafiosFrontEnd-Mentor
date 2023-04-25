@@ -58,7 +58,8 @@ body{
 }
 
 .organiza-data label{
-    font-size: 0.5em;
+    font-size: 0.5rem;
+    letter-spacing: 0.1rem;
     color: var(--cinza-medio-escuro);
 }
 
@@ -75,7 +76,7 @@ input[type = "number"]::-webkit-inner-spin-button, input[type = "number"]::-webk
     border: 1px solid var(--cinza-claro);
     padding-left: 12px;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 800;
 }
 
@@ -95,13 +96,14 @@ input[type = "number"]::-webkit-inner-spin-button, input[type = "number"]::-webk
     align-items: center;
 }
 
-#linha{
+.botao-enviar::before{
+    content: '';
     height: 1px;
     width: 80%;
     background-color: var(--branco-apagado);
 }
 
-.botao-enviar button{
+#botao-submit{
     height: 45px;
     width: 45px;
     border-radius: 50%;
