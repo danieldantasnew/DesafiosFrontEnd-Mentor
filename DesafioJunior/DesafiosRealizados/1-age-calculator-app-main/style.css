@@ -63,6 +63,31 @@ body{
     color: var(--cinza-medio-escuro);
 }
 
+.required{
+    display: none;
+}
+
+.required.active-error{
+    display: block;
+    margin-top: 6px;
+    font-size: 0.4rem;
+    font-style: italic;
+    font-weight: 100;
+    color: var(--vermelho-claro);
+}
+
+.required-self{
+    display: none;
+}
+
+.required-self.active-self{
+    display: block;
+    margin-top: 6px;
+    font-size: 0.4rem;
+    font-style: italic;
+    font-weight: 100;
+    color: var(--vermelho-claro);
+}
 /*Faz o spinner desaparecer Spinner é o indicador que aumenta ou diminui o número no input Number*/
 
 input[type = "number"]::-webkit-inner-spin-button, input[type = "number"]::-webkit-outer-spin-button{

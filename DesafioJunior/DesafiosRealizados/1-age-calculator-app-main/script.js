@@ -11,11 +11,10 @@ function botaoClicado(){
         let valorDia = inputDia.value;
         let valorMes = inputMes.value;
         let valorAno = inputAno.value;
-
+        const activeError = document.querySelectorAll('.required');
         const data = moment(`${valorAno}-${valorMes}-${valorDia}`, 'YYYY-MM-DD', true);
 
         if(data.isValid()){
-            //verificar também se a data digitada é maior que a atual (do dia testado)
             function calculaIdade(ano, mes, dia){
                 let dataNascimento = new Date(ano, mes-1, dia);
                 let diferenca = dataAtual - dataNascimento;
@@ -38,15 +37,81 @@ function botaoClicado(){
 
                 */
             }
+
+            // activeError.forEach((elementoIndividual) =>{
+            //     elementoIndividual.classList.remove('active-error');
+            // });
             calculaIdade(valorAno, valorMes, valorDia);
         }
         else{
-            console.log('não é válida');
+            // activeError.forEach((elementoIndividual) =>{
+            //     elementoIndividual.classList.add('active-error');
+            // });
         }
 
     };
 
     botaoSubmit.addEventListener('click', pegaEntrada);
+
+
 }
 
 botaoClicado();
+
+/*Adiciona ou remove a classe no required*/
+function alteraRequired(booleano, index){
+    const requiredSelf = document.querySelectorAll('.required-self');
+
+    if(booleano){
+        requiredSelf[index].classList.add('active-self');    
+    }
+
+    else{
+        requiredSelf[index].classList.remove('active-self');
+    }
+}
+
+function validaDia(){
+    const inputDia = document.querySelector('#dia');
+
+
+    if(inputDia.value < 1 || inputDia.value > 31){
+        alteraRequired(true, 0);
+        inputDia.style.border = '1px solid var(--vermelho-claro)';
+    }
+    else{
+        alteraRequired(false, 0);
+        inputDia.style.border = '';
+    }
+}
+
+function validaMes(){
+    const inputMes = document.querySelector('#mes');
+
+    if(inputMes.value < 1 || inputMes.value > 12){
+        alteraRequired(true, 1);
+        inputMes.style.border = '1px solid var(--vermelho-claro)';
+    }
+    else{
+        alteraRequired(false, 1);
+        inputMes.style.border = '';
+    }
+
+}
+
+function validaAno(){
+    const inputAno = document.querySelector('#ano');
+    const data = new Date();
+    const dataAtual = data.getFullYear();
+
+    if(inputAno.value > dataAtual){
+        alteraRequired(true, 2);
+        inputAno.style.border = '1px solid var(--vermelho-claro)';
+    }
+    else{
+        alteraRequired(false, 2);
+        inputAno.style.border = '';
+    }
+}
+
+/*FAZER A VERIFICAÇÃO SE ESTÁ VAZIO PARA DIZER QUE É REQUERIDO (FAZER INDIVIDUALMENTE PARA CADA INPUT) E PEDIR PARA INSERIR UMA DATA VÁLIDA CASO ELA NÃO SEJA*/
