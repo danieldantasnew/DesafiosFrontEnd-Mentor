@@ -12,30 +12,38 @@ function botaoClicado(){
         let valorMes = inputMes.value;
         let valorAno = inputAno.value;
 
-        function calculaIdade(ano, mes, dia){
-            let dataNascimento = new Date(ano, mes-1, dia);
-            let diferenca = dataAtual - dataNascimento;
+        const data = moment(`${valorAno}-${valorMes}-${valorDia}`, 'YYYY-MM-DD', true);
 
-            const anos = Math.floor(diferenca / 1000 / 60 / 60 / 24 / 365);
-            textoIdade[0].innerHTML = `${anos}`;
+        if(data.isValid()){
+            //verificar também se a data digitada é maior que a atual (do dia testado)
+            function calculaIdade(ano, mes, dia){
+                let dataNascimento = new Date(ano, mes-1, dia);
+                let diferenca = dataAtual - dataNascimento;
 
-            const meses = Math.floor((diferenca / 1000 / 60 / 60 / 24) % 365 / 30);
-            textoIdade[1].innerHTML = `${meses}`;
+                const anos = Math.floor(diferenca / 1000 / 60 / 60 / 24 / 365);
+                textoIdade[0].innerHTML = `${anos}`;
 
-            const dias = Math.floor((diferenca / 1000 / 60 / 60 / 24) % 365 % 30);
-            textoIdade[2].innerHTML = `${dias}`;
+                const meses = Math.floor((diferenca / 1000 / 60 / 60 / 24) % 365 / 30);
+                textoIdade[1].innerHTML = `${meses}`;
 
-            /*mes e dias estão errados
-            - Fazer verificação se a data existe, por exemplo 31/04/2023 não existe
+                const dias = Math.floor((diferenca / 1000 / 60 / 60 / 24) % 365 % 30);
+                textoIdade[2].innerHTML = `${dias}`;
 
-            - Não permitir que seja enviado dados vazios
+                /*mes e dias estão errados
+                - Fazer verificação se a data existe, por exemplo 31/04/2023 não existe
 
-            - Arrumar mobile
+                - Não permitir que seja enviado dados vazios
 
-            */
+                - Arrumar mobile
+
+                */
+            }
+            calculaIdade(valorAno, valorMes, valorDia);
+        }
+        else{
+            console.log('não é válida');
         }
 
-        calculaIdade(valorAno, valorMes, valorDia);
     };
 
     botaoSubmit.addEventListener('click', pegaEntrada);
