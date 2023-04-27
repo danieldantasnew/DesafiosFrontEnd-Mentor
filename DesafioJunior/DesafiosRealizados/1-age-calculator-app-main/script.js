@@ -61,7 +61,7 @@ function botaoClicado(){
                 designInput.forEach(element => {
                     element.style.border = ''
                 });
-                requiredDateValid.classList.remove('active-valid')
+                requiredDateValid.classList.remove('active-error')
                 calculaIdade(valorAno, valorMes, valorDia);
             }
             else{
@@ -70,7 +70,7 @@ function botaoClicado(){
                     element.style.border = '1px solid var(--vermelho-claro)'
                 });
 
-                requiredDateValid.classList.add('active-valid')
+                requiredDateValid.classList.add('active-error')
 
             }
         }
@@ -87,11 +87,11 @@ function alteraRequired(booleano, index){
     const requiredSelf = document.querySelectorAll('.required-self');
 
     if(booleano){
-        requiredSelf[index].classList.add('active-self');    
+        requiredSelf[index].classList.add('active-error');    
     }
 
     else{
-        requiredSelf[index].classList.remove('active-self');
+        requiredSelf[index].classList.remove('active-error');
     }
 }
 
@@ -137,3 +137,32 @@ function validaAno(){
         inputAno.style.border = '';
     }
 }
+
+function ouveInput(){
+    const input = document.querySelectorAll('.js-click');
+    const activeError = document.querySelectorAll('.required');
+    const requiredDateValid = document.querySelector('.required-valid-date')
+
+    function callback(){
+        activeError.forEach((elementoIndividual) =>{
+            elementoIndividual.classList.remove('active-error');
+        });
+
+        input.forEach(element => {
+            if(element.nextElementSibling.nextElementSibling.classList.contains('active-error')){
+                element.style.border = '1px solid var(--vermelho-claro)'
+            }
+            else{
+                element.style.border = ''
+            }
+        });
+
+        requiredDateValid.classList.remove('active-error')
+    }
+
+    input.forEach((elemento) =>{
+        elemento.addEventListener('click', callback);
+    });
+}
+
+ouveInput();

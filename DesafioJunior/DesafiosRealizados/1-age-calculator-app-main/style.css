@@ -77,13 +77,14 @@ body{
 
 .required.active-error{
     display: block;
+
 }
 
 .required-self{
     display: none;
 }
 
-.required-self.active-self{
+.required-self.active-error{
     display: block;
 }
 
@@ -91,7 +92,7 @@ body{
     display: none;
 }
 
-.required-valid-date.active-valid{
+.required-valid-date.active-error{
     display: block;
 }
 /*Faz o spinner desaparecer Spinner é o indicador que aumenta ou diminui o número no input Number*/
@@ -147,7 +148,7 @@ input[type = "number"]::-webkit-inner-spin-button, input[type = "number"]::-webk
     background-size: 22px;
 }
 
-.botao-enviar button:hover{
+#botao-submit:hover{
     background-color: var(--preto-apagado);
 }
 
