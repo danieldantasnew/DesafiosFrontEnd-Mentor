@@ -5,55 +5,79 @@ function botaoClicado(){
     const inputAno = document.querySelector('#ano');
     const dataAtual = new Date();
     const textoIdade = document.querySelectorAll('.idade');
+    const designInput = document.querySelectorAll('.design-input')
     
     function pegaEntrada(evento){
         evento.preventDefault(); //evita que a página seja recarregada após o envio do formulário
+        const requiredDateValid = document.querySelector('.required-valid-date')
         let valorDia = inputDia.value;
         let valorMes = inputMes.value;
         let valorAno = inputAno.value;
         const activeError = document.querySelectorAll('.required');
         const data = moment(`${valorAno}-${valorMes}-${valorDia}`, 'YYYY-MM-DD', true);
 
-        if(data.isValid()){
-            function calculaIdade(ano, mes, dia){
-                let dataNascimento = new Date(ano, mes-1, dia);
-                let diferenca = dataAtual - dataNascimento;
+        if(valorDia == '' && valorMes == '' && valorAno == ''){
+            activeError.forEach((elementoIndividual) =>{
+                elementoIndividual.classList.add('active-error');
+            });
 
-                const anos = Math.floor(diferenca / 1000 / 60 / 60 / 24 / 365);
-                textoIdade[0].innerHTML = `${anos}`;
-
-                const meses = Math.floor((diferenca / 1000 / 60 / 60 / 24) % 365 / 30);
-                textoIdade[1].innerHTML = `${meses}`;
-
-                const dias = Math.floor((diferenca / 1000 / 60 / 60 / 24) % 365 % 30);
-                textoIdade[2].innerHTML = `${dias}`;
-
-                /*mes e dias estão errados
-                - Fazer verificação se a data existe, por exemplo 31/04/2023 não existe
-
-                - Não permitir que seja enviado dados vazios
-
-                - Arrumar mobile
-
-                */
-            }
-
-            // activeError.forEach((elementoIndividual) =>{
-            //     elementoIndividual.classList.remove('active-error');
-            // });
-            calculaIdade(valorAno, valorMes, valorDia);
+            designInput.forEach(element => {
+                element.style.border = '1px solid var(--vermelho-claro)'
+            });
         }
         else{
-            // activeError.forEach((elementoIndividual) =>{
-            //     elementoIndividual.classList.add('active-error');
-            // });
+            activeError.forEach((elementoIndividual) =>{
+                elementoIndividual.classList.remove('active-error');
+            });
+
+            designInput.forEach(element => {
+                element.style.border = ''
+            });
+
+            if(data.isValid()){
+                function calculaIdade(ano, mes, dia){
+                    let dataNascimento = new Date(ano, mes-1, dia);
+                    let diferenca = dataAtual - dataNascimento;
+    
+                    const anos = Math.floor(diferenca / 1000 / 60 / 60 / 24 / 365);
+                    textoIdade[0].innerHTML = `${anos}`;
+    
+                    const meses = Math.floor((diferenca / 1000 / 60 / 60 / 24) % 365 / 30);
+                    textoIdade[1].innerHTML = `${meses}`;
+    
+                    const dias = Math.floor((diferenca / 1000 / 60 / 60 / 24) % 365 % 30);
+                    textoIdade[2].innerHTML = `${dias}`;
+    
+                    /*mes e dias estão errados
+                    - Fazer verificação se a data existe, por exemplo 31/04/2023 não existe
+    
+                    - Não permitir que seja enviado dados vazios
+    
+                    - Arrumar mobile
+    
+                    */
+                }
+                
+                designInput.forEach(element => {
+                    element.style.border = ''
+                });
+                requiredDateValid.classList.remove('active-valid')
+                calculaIdade(valorAno, valorMes, valorDia);
+            }
+            else{
+                
+                designInput.forEach(element => {
+                    element.style.border = '1px solid var(--vermelho-claro)'
+                });
+
+                requiredDateValid.classList.add('active-valid')
+
+            }
         }
 
     };
 
     botaoSubmit.addEventListener('click', pegaEntrada);
-
-
 }
 
 botaoClicado();
@@ -113,5 +137,3 @@ function validaAno(){
         inputAno.style.border = '';
     }
 }
-
-/*FAZER A VERIFICAÇÃO SE ESTÁ VAZIO PARA DIZER QUE É REQUERIDO (FAZER INDIVIDUALMENTE PARA CADA INPUT) E PEDIR PARA INSERIR UMA DATA VÁLIDA CASO ELA NÃO SEJA*/

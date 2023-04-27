@@ -63,17 +63,20 @@ body{
     color: var(--cinza-medio-escuro);
 }
 
+.design-required{
+    margin-top: 6px;
+    font-size: 0.4rem;
+    font-style: italic;
+    font-weight: 100;
+    color: var(--vermelho-claro);
+}
+
 .required{
     display: none;
 }
 
 .required.active-error{
     display: block;
-    margin-top: 6px;
-    font-size: 0.4rem;
-    font-style: italic;
-    font-weight: 100;
-    color: var(--vermelho-claro);
 }
 
 .required-self{
@@ -82,11 +85,14 @@ body{
 
 .required-self.active-self{
     display: block;
-    margin-top: 6px;
-    font-size: 0.4rem;
-    font-style: italic;
-    font-weight: 100;
-    color: var(--vermelho-claro);
+}
+
+.required-valid-date{
+    display: none;
+}
+
+.required-valid-date.active-valid{
+    display: block;
 }
 /*Faz o spinner desaparecer Spinner é o indicador que aumenta ou diminui o número no input Number*/
 
