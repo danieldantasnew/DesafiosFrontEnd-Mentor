@@ -110,10 +110,15 @@ input[type = "number"]::-webkit-inner-spin-button, input[type = "number"]::-webk
     border-radius: 5px;
     font-size: 1rem;
     font-weight: 800;
+    outline: none;
+}
+
+.design-input:hover{ 
+    border: 1px solid var(--roxo);
 }
 
 .design-input:focus{ 
-    outline: 1px solid var(--roxo);
+    border: 1px solid var(--roxo);
 }
 
 .design-input::placeholder{

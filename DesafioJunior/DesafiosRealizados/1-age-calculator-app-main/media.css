@@ -30,13 +30,13 @@
     }
 
     .botao-enviar::before{
-        width: 38%;
+        width: 39%;
     }
 
     .botao-enviar::after{
         content: '';
         height: 1px;
-        width: 38%;
+        width: 39%;
         background-color: var(--branco-apagado);
     }
 

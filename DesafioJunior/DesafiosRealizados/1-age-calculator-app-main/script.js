@@ -48,14 +48,7 @@ function botaoClicado(){
                     const dias = Math.floor((diferenca / 1000 / 60 / 60 / 24) % 365 % 30);
                     textoIdade[2].innerHTML = `${dias}`;
     
-                    /*mes e dias estão errados
-                    - Fazer verificação se a data existe, por exemplo 31/04/2023 não existe
-    
-                    - Não permitir que seja enviado dados vazios
-    
-                    - Arrumar mobile
-    
-                    */
+                    /*mês e dias estão errados - O ERRO é matemático, não de sintaxe ou semântica*/
                 }
                 
                 designInput.forEach(element => {
@@ -97,9 +90,10 @@ function alteraRequired(booleano, index){
 
 function validaDia(){
     const inputDia = document.querySelector('#dia');
+    const num = parseInt(inputDia.value);
+    
 
-
-    if(inputDia.value < 1 || inputDia.value > 31){
+    if(num != inputDia.value || inputDia.value < 1 || inputDia.value > 31){
         alteraRequired(true, 0);
         inputDia.style.border = '1px solid var(--vermelho-claro)';
     }
@@ -111,8 +105,9 @@ function validaDia(){
 
 function validaMes(){
     const inputMes = document.querySelector('#mes');
+    const num = parseInt(inputMes.value);
 
-    if(inputMes.value < 1 || inputMes.value > 12){
+    if(num != inputMes.value || inputMes.value < 1 || inputMes.value > 12){
         alteraRequired(true, 1);
         inputMes.style.border = '1px solid var(--vermelho-claro)';
     }
@@ -127,8 +122,9 @@ function validaAno(){
     const inputAno = document.querySelector('#ano');
     const data = new Date();
     const dataAtual = data.getFullYear();
+    const num = parseInt(inputAno.value);
 
-    if(inputAno.value > dataAtual){
+    if(num != inputAno.value || inputAno.value > dataAtual){
         alteraRequired(true, 2);
         inputAno.style.border = '1px solid var(--vermelho-claro)';
     }
