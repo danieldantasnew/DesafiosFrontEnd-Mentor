@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*Primária*/
+    --vermelho-suave: hsl(10, 79%, 65%);
+    --ciano: hsl(186, 34%, 60%);
+
+    /*Neutra*/
+
+    --marrom-escuro: hsl(25, 47%, 15%);
+    --marrom-medio: hsl(28, 10%, 53%);
+    --creme: hsl(27, 66%, 92%);
+    --laranja-muito-palido: hsl(33, 100%, 98%);
+}
+
+body{
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--creme);
+}
+
+.card{
+    max-width: 400px;
+    max-height: 500px;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+.card-up{
+    background-color: var(--vermelho-suave);
+    height: 80px;
+    border-radius: 13px;
+    margin-bottom: 1.5vh;
+    padding: 0 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-title{
+    color: var(--laranja-muito-palido);
+    line-height: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.text-title h2{
+    font-size: 0.6rem;
+    font-weight: 100;
+}
+
+.text-title p{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.logo{
+    background-image: url(images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 45px;
+    width: 45px;
+}
+
+.card-down{
+    background-color: var(--laranja-muito-palido);
+    height: 360px;
+    border-radius: 13px;
+    padding: 0 1.3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.card-down h1{
+    margin-top: 2vh;
+}
+
+.list-grafic{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 3px;
+    border-bottom: 1px solid var(--creme);
+}
+
+.organiza-lista{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 2vh;
+}
+
+.organiza-lista p{
+    margin-top: 8px;
+    font-size: 0.7rem;
+    color: var(--marrom-medio);
+}
+
+.grafic{
+    width: 35px;
+    height: 100px;
+    background-color: var(--ciano);
+    border-radius: 5px;
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-left h3{
+    font-size: 0.6rem;
+    color: var(--marrom-medio);
+    font-weight: 400;
+}
+
+.side-left p{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.side-right #text-1{
+    text-align: right;
+    font-weight: 700;
+    font-size: 0.7rem;
+}
+
+.side-right #text-2{
+    font-size: 0.7rem;
+    color: var(--marrom-medio);
+}
