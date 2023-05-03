@@ -44,7 +44,10 @@ function graficoHover(){
     }
 
     graficos.forEach((grafico) =>{
-        grafico.addEventListener('mouseenter', callback);
+        //quando a animação do gráfico acabar aí sim passe a mostrar o valor, se nãao o valor fica sendo mostrado lá em cima antes da barra do gráfico ter carregado completamente.
+        grafico.addEventListener('animationend', ()=>{
+            grafico.addEventListener('mouseenter', callback);
+        });
     });
 
     function callbackLeave(evento){
