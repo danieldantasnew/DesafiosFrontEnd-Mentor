@@ -1,3 +1,5 @@
+//Altera a cor de cada barra do gráfico e o seu tamanho
+
 function alteraGrafico(){
     const valorMinimo = 0;
     const valorMaximo = 120;
@@ -28,12 +30,17 @@ function alteraGrafico(){
 
 alteraGrafico();
 
+//Adiciona ou remove o display para mostra o valor de cada barra do gráfico
 function graficoHover(){
     const graficos = document.querySelectorAll('.grafic')
+    const valoresGrafico = document.querySelectorAll('.valor')
 
     function callback(evento){
-        //vai adicionar a classe que mostra o valor
+        evento.target.parentElement.previousElementSibling.classList.add('js-altera');
         
+        valoresGrafico.forEach((valor)=>{
+            valor.innerHTML = `$${evento.target.getAttribute('value')}`
+        });
     }
 
     graficos.forEach((grafico) =>{
@@ -41,7 +48,7 @@ function graficoHover(){
     });
 
     function callbackLeave(evento){
-        //vai remover a classe que mostra o valor
+        evento.target.parentElement.previousElementSibling.classList.remove('js-altera');
     }
 
     graficos.forEach((grafico) =>{

@@ -85,7 +85,6 @@ body{
     list-style: none;
     display: flex;
     justify-content: space-between;
-    gap: 3px;
     border-bottom: 1px solid var(--creme);
 }
 
@@ -103,13 +102,37 @@ body{
     color: var(--marrom-medio);
 }
 
+.valor.js-altera{
+    background-color: var(--marrom-escuro);
+    color: var(--laranja-muito-palido);
+    margin-bottom: 6px;
+    padding: 0 4px;
+    width: 45px;
+    height: 25px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.valor{
+    display: none;
+}
+
+.bg-grafic{
+    width: 45px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
 .grafic{
     width: 35px;
     height: 120px;
     background-color: blue;
     border-radius: 5px;
     cursor: pointer;
-    animation: grafico 3s forwards;
+    animation: grafico 2s forwards;
 }
 
 @keyframes grafico {
