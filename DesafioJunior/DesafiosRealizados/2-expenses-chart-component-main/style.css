@@ -105,10 +105,38 @@ body{
 
 .grafic{
     width: 35px;
-    height: 100px;
-    background-color: var(--ciano);
+    height: 120px;
+    background-color: blue;
     border-radius: 5px;
+    cursor: pointer;
+    animation: grafico 3s forwards;
 }
+
+@keyframes grafico {
+    from{
+        max-height: 0%;
+    }
+    to{
+        max-height: 100%;
+    }
+}
+
+.grafic.js-red{
+    background-color: var(--vermelho-suave);
+}
+
+.grafic.js-red:hover{
+    background-color: hsla(10, 79%, 65%, 0.651);
+}
+
+.grafic.js-ciano{
+    background-color: var(--ciano);
+}
+
+.grafic.js-ciano:hover{
+    background-color: hsla(186, 34%, 60%, 0.671);
+}
+
 
 .bottom{
     display: flex;
