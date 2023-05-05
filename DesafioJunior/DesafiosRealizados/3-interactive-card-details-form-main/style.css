@@ -41,6 +41,64 @@ body{
     width: 100%;
 }
 
+.frente-cartao{
+    background-image: url(images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 220px;
+    width: 400px;
+    margin: 5vh 5vw;
+    padding: 1.3rem 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.logo{
+    background-image: url(images/card-logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60px;
+    width: 60px;
+}
+
+.numero-cartao{
+    font-size: 1.3rem;
+    letter-spacing: 5.5px;
+    margin-top: 3vh;
+    color: var(--branco);
+}
+
+.nome-validade{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.design-cartao{
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--branco);
+}
+
+.traseira-cartao{
+    background-image: url(images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 220px;
+    width: 400px;
+    margin: 5vh 5vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cvc-cartao{
+    padding-right: 2.8rem;
+    padding-bottom: 3px;
+}
+
 .container-2{
     height: 100%;
     width: 100%;
@@ -51,7 +109,7 @@ body{
 
 
 .formulario{
-    height: 300px;
+    max-height: 400px;
     width: 305px;
     display: flex;
     flex-direction: column;
@@ -70,12 +128,17 @@ body{
 
 .input{
     width: 19.05rem;
+    font-weight: 500;
     color: var(--violeta-muito-escuro);
     height: 30px;
     padding-left: 8px;
     border-radius: 5px;
     border: none;
     outline: var(--acinzentado-violeta-claro) 1px solid;
+}
+
+.input:focus{
+    border: hsl(278, 94%, 30%) 1px solid;
 }
 
 .input::placeholder{
@@ -85,6 +148,21 @@ body{
 
 input[type = "number"]::-webkit-inner-spin-button, input[type = "number"]::-webkit-outer-spin-button{
     -webkit-appearance: none;
+}
+
+p.msg-error:first-of-type{
+    margin-top: 0px;
+}
+
+.msg-error{
+    display: none;
+}
+
+.msg-error.active{
+    display: block;
+    font-size: 0.56rem;
+    margin-top: 10px;
+    color: var(--vermelho);
 }
 
 .parte-final-input{
