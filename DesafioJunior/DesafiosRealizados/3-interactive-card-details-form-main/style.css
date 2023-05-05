@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*COR PRIMÁRIA */
+    --gradiente: hsl(249, 99%, 64%) to hsl(278, 94%, 30%); /*active input border*/
+    --vermelho: hsl(0, 100%, 66%); /*input erro*/
+    
+    /*COR SECUNDÁRIA */
+
+    --branco: hsl(0, 0%, 100%);
+    --acinzentado-violeta-claro: hsl(270, 3%, 87%);
+    --acinzentado-violeta-escuro: hsl(279, 6%, 55%);
+    --violeta-muito-escuro: hsl(278, 68%, 11%);
+}
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--branco);
+}
+
+.principal{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    height: 100%;
+}
+
+.container-1{
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.container-2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.formulario{
+    height: 300px;
+    width: 305px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.organiza-input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.6rem;
+    margin-top: 18px;
+    font-weight: 500;
+}
+
+.input{
+    width: 19.05rem;
+    color: var(--violeta-muito-escuro);
+    height: 30px;
+    padding-left: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: var(--acinzentado-violeta-claro) 1px solid;
+}
+
+.input::placeholder{
+    font-weight: 600;
+    color: var(--acinzentado-violeta-claro);
+}
+
+input[type = "number"]::-webkit-inner-spin-button, input[type = "number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+
+.parte-final-input{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.input-data{
+    width: 60px;
+}
+
+#data-mes{
+    margin-right: 5px;
+}
+
+#cvc{
+    width: 10.2rem;
+}
+
+#botao-submit{
+    width: 100%;
+    height: 35px;
+    margin-top: 25px;
+    border-radius: 6px;
+    background-color: var(--violeta-muito-escuro);
+    color: var(--branco);
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+    border-color: transparent;
+}
+
+#botao-submit:hover{
+    background-color: hsla(278, 68%, 11%, 0.849);
+}
