@@ -94,7 +94,7 @@ body{
     align-items: center;
 }
 
-.cvc-cartao{
+#cvc-cartao{
     padding-right: 2.8rem;
     padding-bottom: 3px;
 }
