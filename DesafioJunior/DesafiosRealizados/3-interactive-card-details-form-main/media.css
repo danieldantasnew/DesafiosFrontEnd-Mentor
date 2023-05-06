@@ -1,0 +1,75 @@
+@media (max-width: 1540px) {
+    .frente-cartao{
+        top: 17vh;
+        left: 10vw;
+    }
+
+    .numero-cartao{
+        font-size: 1.3rem;
+        letter-spacing: 5.5px;
+        margin-top: 3vh;
+        color: var(--branco);
+    }
+
+    .traseira-cartao{
+        top: 17vh;
+        left: 10vw;
+    }
+
+    .formulario{      
+        margin-left: 15vw;
+    }
+}
+
+@media (max-width: 955px){
+    .principal{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 280px 1fr;
+        width: 100%;
+        height: 100%;
+    }
+
+    .frente-cartao{
+        top: 17vh;
+        left: 25%;
+        transform: translateX(-25%);
+        z-index: 1000;
+        height: 180px;
+        width: 350px;
+        padding: 1.3rem 22px;
+        border-radius: 8px;
+    }
+
+    .numero-cartao{
+        font-size: 1rem;
+        letter-spacing: 5.5px;
+        margin-top: 3vh;
+        color: var(--branco);
+    }
+
+    .traseira-cartao{
+        top: 4vh;
+        left: 60%;
+        transform: translateX(-60%);
+        margin: 0;
+        height: 180px;
+        width: 350px;
+        border-radius: 8px;
+        
+    }
+
+    .design-cartao{
+        font-size: 0.6rem;
+        letter-spacing: 2px;
+        color: var(--branco);
+    }
+
+    .formulario{      
+        margin-left: 0vw;
+    }
+
+    #cvc-cartao{
+        padding-top: 12px;
+    }
+}
