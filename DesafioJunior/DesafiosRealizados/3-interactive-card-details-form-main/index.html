@@ -17,7 +17,10 @@
         <div id="numero-cartao" class="numero-cartao">0000 0000 0000 0000</div>
         <div class="nome-validade">
           <div id="nome-cartao" class="design-cartao">JANE APPLESEED</div>
-          <div id="validade-cartao" class="design-cartao">00/00</div>
+          <div id="validade-cartao" class="design-cartao">
+            <div class="mes-frente-cartao">00/</div>
+            <div class="ano-frente-cartao">00</div>
+          </div>
         </div>
       </div>
       <div class="traseira-cartao">
@@ -53,7 +56,7 @@
           </div>
           <div class="organiza-input">
             <label for="cvc">CVC</label>
-            <input type="number" id="cvc" class="input" placeholder=" e.g. 123" oninput="errorCVC()" required>
+            <input type="text" id="cvc" class="input" maxlength="3" placeholder=" e.g. 123" oninput="errorCVC()" required>
             <p class="msg-error">Can't be blank</p>
           </div>
         </section>

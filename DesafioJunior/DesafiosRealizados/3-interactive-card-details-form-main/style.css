@@ -61,6 +61,19 @@ body{
     z-index: unset;
 }
 
+.frente-cartao.js-cartao-animation{
+    animation: animacaoCartao 1s forwards;
+}
+
+@keyframes animacaoCartao {
+    from{
+        transform: translate3d(0, 0, 0);
+    }
+    to{
+        transform: translateX(10vw);
+    }
+}
+
 .logo{
     background-image: url(images/card-logo.svg);
     background-repeat: no-repeat;
@@ -80,6 +93,11 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#validade-cartao{
+    display: flex;
+    flex-direction: row;
 }
 
 .design-cartao{
@@ -102,6 +120,10 @@ body{
     top: 17vh;
     left: 22vw;
     transform: translateX(0%);
+}
+
+.traseira-cartao.js-cartao-animation{
+    animation: animacaoCartao 1s forwards;
 }
 
 #cvc-cartao{

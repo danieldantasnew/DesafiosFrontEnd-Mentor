@@ -1,6 +1,5 @@
 function callbackCartao(){
     const numCartao = document.querySelector('#numero-cartao-input');
-
     //formatar com espaços usando expressão regular e retirar as letras e outros caracteres.
 }
 
@@ -78,3 +77,64 @@ function errorCVC(){
         cvc.style.border = '';
     }
 }
+
+function dadosCartao(){
+    const numCartaoInput = document.querySelector('#numero-cartao-input');
+    const nomeCartaoInput = document.querySelector('#nome');
+    const mesInput = document.querySelector('#data-mes');
+    const anoInput = document.querySelector('#data-ano');
+    const cvcInput = document.querySelector('#cvc');
+
+    //Frente cartão
+    const nomeCartao = document.querySelector('#nome-cartao');
+    const cvcCartao = document.querySelector('#cvc-cartao');
+    const numfrenteCartao = document.querySelector('#numero-cartao');
+    const mesCartao = document.querySelector('.mes-frente-cartao');
+    const anoCartao = document.querySelector('.ano-frente-cartao');
+
+    numCartaoInput.addEventListener('input', ()=>{
+        numfrenteCartao.innerText = numCartaoInput.value;
+    });
+
+    nomeCartaoInput.addEventListener('input', ()=>{
+        nomeCartao.innerText = nomeCartaoInput.value.toUpperCase();
+    });
+
+    mesInput.addEventListener('input', () =>{
+        mesCartao.innerText = `${mesInput.value}/`;
+    });
+
+    anoInput.addEventListener('input', ()=>{
+        anoCartao.innerText = anoInput.value;
+    });
+
+    cvcInput.addEventListener('input', ()=>{
+        cvcCartao.innerText = cvcInput.value;
+    });
+
+}
+
+dadosCartao();
+
+function animationCard(){
+    const frenteCartao = document.querySelector('.frente-cartao');
+    const traseiraCartao = document.querySelector('.traseira-cartao');
+
+
+    const numCartaoInput = document.querySelector('#numero-cartao-input');
+    const nomeCartaoInput = document.querySelector('#nome');
+    const cvcInput = document.querySelector('#cvc');
+
+    cvcInput.addEventListener('input', () =>{
+        traseiraCartao.classList.add('js-cartao-animation');
+    });
+
+    document.addEventListener('click', (evento)=>{
+        if(!cvcInput.contains(evento.target)){
+            traseiraCartao.classList.remove('js-cartao-animation');
+        }
+    })
+
+}
+
+animationCard();
