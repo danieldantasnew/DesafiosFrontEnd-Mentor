@@ -31,12 +31,12 @@
       <form action="" class="formulario" autocomplete="off">
         <p class="organiza-input">
           <label for="nome">CARDHOLDER NAME</label>
-          <input type="text" id="nome" class="input" maxlength="20" placeholder="e.g. Jane Appleseed" oninput="errorName()" required>
+          <input type="text" id="nome" class="input js-frente-cartao" maxlength="20" placeholder="e.g. Jane Appleseed" oninput="errorName()" required>
           <p class="msg-error">Can't be blank</p>
         </p>
         <p class="organiza-input">
           <label for="numero-cartao-input">CARD NUMBER</label>
-          <input type="text" id="numero-cartao-input" class="input" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" required oninput="callbackCartao()">
+          <input type="text" id="numero-cartao-input" class="input js-frente-cartao" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" required oninput="callbackCartao()">
           <p class="msg-error">Wrong format, numbers only</p>
         </p>
 
@@ -47,9 +47,9 @@
                 <label for="data-mes">EXP. DATE (MM/YY)</label>
               </div>
               <div>
-                <input type="number" id="data-mes" class="input input-data" placeholder="MM" oninput="errorMonth()" required>
+                <input type="number" id="data-mes" class="input input-data js-frente-cartao" placeholder="MM" oninput="errorMonth()" required>
 
-                <input type="number" id="data-ano" class="input input-data" placeholder="YY" oninput="errorYear()" required>
+                <input type="number" id="data-ano" class="input input-data js-frente-cartao" placeholder="YY" oninput="errorYear()" required>
               </div>
               <p class="msg-error">Can't be blank</p>
             </div>

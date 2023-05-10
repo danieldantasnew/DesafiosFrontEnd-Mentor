@@ -124,17 +124,46 @@ function animationCard(){
     const numCartaoInput = document.querySelector('#numero-cartao-input');
     const nomeCartaoInput = document.querySelector('#nome');
     const cvcInput = document.querySelector('#cvc');
+    const mesInput = document.querySelector('#data-mes');
+    const anoInput = document.querySelector('#data-ano');
+
+    //frente cartão
+
+    numCartaoInput.addEventListener('input', () =>{
+        frenteCartao.classList.add('js-cartao-animation');
+    });
+
+    nomeCartaoInput.addEventListener('input', () =>{
+        frenteCartao.classList.add('js-cartao-animation');
+    });
+
+    mesInput.addEventListener('input', () =>{
+        frenteCartao.classList.add('js-cartao-animation');
+    });
+
+    anoInput.addEventListener('input', () =>{
+        frenteCartao.classList.add('js-cartao-animation');
+    });
+
+    // traseira cartão
 
     cvcInput.addEventListener('input', () =>{
         traseiraCartao.classList.add('js-cartao-animation');
     });
 
+
     document.addEventListener('click', (evento)=>{
         if(!cvcInput.contains(evento.target)){
             traseiraCartao.classList.remove('js-cartao-animation');
         }
+        const valorBoolean = evento.target.classList.contains('js-frente-cartao');
+        
+        if(!valorBoolean){
+            frenteCartao.classList.remove('js-cartao-animation');
+        };
     })
 
+    //Arrumar para verificar se é filho de algum elementto da parte da frente do cartão se não for recuar o cartão na animação
 }
 
 animationCard();

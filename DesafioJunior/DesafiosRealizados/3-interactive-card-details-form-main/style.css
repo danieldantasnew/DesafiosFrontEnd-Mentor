@@ -59,6 +59,7 @@ body{
     left: 20vw;
     transform: translateX(0%);
     z-index: unset;
+    animation: animacaoCartao2 1s forwards;
 }
 
 .frente-cartao.js-cartao-animation{
@@ -67,10 +68,19 @@ body{
 
 @keyframes animacaoCartao {
     from{
-        transform: translate3d(0, 0, 0);
+        transform: translateX(0);
     }
     to{
         transform: translateX(10vw);
+    }
+}
+
+@keyframes animacaoCartao2 {
+    from{
+        transform: translateX(10vw);
+    }
+    to{
+        transform: translateX(0);
     }
 }
 
@@ -120,6 +130,7 @@ body{
     top: 17vh;
     left: 22vw;
     transform: translateX(0%);
+    animation: animacaoCartao2 1s forwards;
 }
 
 .traseira-cartao.js-cartao-animation{
