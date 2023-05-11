@@ -59,29 +59,12 @@ body{
     left: 20vw;
     transform: translateX(0%);
     z-index: unset;
-    animation: animacaoCartao2 1s forwards;
+    transform: translate3d(0, 0, 0);
+    transition: transform 1s;
 }
 
 .frente-cartao.js-cartao-animation{
-    animation: animacaoCartao 1s forwards;
-}
-
-@keyframes animacaoCartao {
-    from{
-        transform: translateX(0);
-    }
-    to{
-        transform: translateX(10vw);
-    }
-}
-
-@keyframes animacaoCartao2 {
-    from{
-        transform: translateX(10vw);
-    }
-    to{
-        transform: translateX(0);
-    }
+    transform: translate3d(5vw, 0, 0);
 }
 
 .logo{
@@ -130,11 +113,12 @@ body{
     top: 17vh;
     left: 22vw;
     transform: translateX(0%);
-    animation: animacaoCartao2 1s forwards;
+    transform: translate3d(0, 0, 0);
+    transition: transform 1s;
 }
 
 .traseira-cartao.js-cartao-animation{
-    animation: animacaoCartao 1s forwards;
+    transform: translate3d(5vw, 0, 0);
 }
 
 #cvc-cartao{

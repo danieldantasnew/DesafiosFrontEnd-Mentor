@@ -1,6 +1,6 @@
 function callbackCartao(){
     const numCartao = document.querySelector('#numero-cartao-input');
-    //formatar com espaços usando expressão regular e retirar as letras e outros caracteres.
+    //formatar com espaços usando expressão regular e retirar as letras e outros caracteres tanto no numero do cartão como no cvc.
 }
 
 function error(boolean, index){
@@ -149,6 +149,7 @@ function animationCard(){
 
     cvcInput.addEventListener('input', () =>{
         traseiraCartao.classList.add('js-cartao-animation');
+        frenteCartao.classList.remove('js-cartao-animation');
     });
 
 
