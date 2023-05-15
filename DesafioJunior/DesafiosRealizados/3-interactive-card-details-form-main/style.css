@@ -211,7 +211,7 @@ p.msg-error:first-of-type{
     width: 10.2rem;
 }
 
-#botao-submit{
+.botao{
     width: 100%;
     height: 35px;
     margin-top: 25px;
@@ -223,6 +223,45 @@ p.msg-error:first-of-type{
     border-color: transparent;
 }
 
-#botao-submit:hover{
+.botao:hover{
     background-color: hsla(278, 68%, 11%, 0.849);
+}
+
+/* PÁGINA THANK */
+
+.msg-thank{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 280px;
+}
+
+.msg-thank h2{
+    margin-top: 1vh;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.msg-thank p{
+    color: var(--acinzentado-violeta-escuro);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 40px;
+}
+
+#img-thank{
+    background-image: url(images/icon-complete.svg);
+    height: 60px;
+    width: 60px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#btn-continue{
+    margin-top: 5px;
 }

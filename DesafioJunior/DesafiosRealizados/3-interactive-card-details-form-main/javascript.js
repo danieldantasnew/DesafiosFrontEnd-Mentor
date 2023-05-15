@@ -1,3 +1,19 @@
+function DomElement(seletor){
+   
+    this.elementos = function(){
+        return document.querySelector(seletor);
+    }
+
+    this.addClasse = function(classe){
+        this.elementos().classList.add(classe);
+    }
+
+    this.removeClasse = function(classe){
+        this.elementos().classList.remove(classe);
+    }
+}
+
+
 function callbackCartao(){
     const numCartao = document.querySelector('#numero-cartao-input');
     //formatar com espaços usando expressão regular e retirar as letras e outros caracteres tanto no numero do cartão como no cvc.
@@ -5,76 +21,75 @@ function callbackCartao(){
 
 function error(boolean, index){
     const allErro = document.querySelectorAll('.msg-error');
-    const mes = document.querySelector('#data-mes');
-    const ano = document.querySelector('#data-ano');
+    const mes = new DomElement('#data-mes')
+    const ano = new DomElement('#data-ano')
 
 
     if(boolean){
         allErro[index].classList.add('active');
     }
     else{
-        if(!ano.classList.contains('compara') && !mes.classList.contains('compara')){
+        if(!ano.elementos().classList.contains('compara') && !mes.elementos().classList.contains('compara')){
             allErro[index].classList.remove('active');
         }
     }
 }
 
 function errorName(){
-    const nome = document.querySelector('#nome');
+    const nome = new DomElement('#nome')
 
-    if(nome.value.length <= 0){
+    if(nome.elementos().value.length <= 0){
         error(true, 0);
-        nome.style.border = '1px solid var(--vermelho)';
+        nome.elementos().style.border = '1px solid var(--vermelho)';
     }
     else{
         error(false, 0);
-        nome.style.border = '';
+        nome.elementos().style.border = '';
     }
 }
 
 function errorMonth(){
-    const mes = document.querySelector('#data-mes');
+    const mes = new DomElement('#data-mes');
 
 
-    if(mes.value.length > 2 || mes.value.length <= 0 || mes.value <= 0 || mes.value > 12){
+    if(mes.elementos().value.length > 2 || mes.elementos().value.length <= 0 || mes.elementos().value <= 0 || mes.elementos().value > 12){
         error(true, 2);
-        mes.style.border = '1px solid var(--vermelho)';
-        mes.classList.add('compara');
-
+        mes.elementos().style.border = '1px solid var(--vermelho)';
+        mes.addClasse('compara')
     }
     else{
-        mes.classList.remove('compara'); //colocar para remover a classe antes de ativar a função error senão quando for acionada a função ainda não terá removido a classe e não funcionará
+        mes.removeClasse('compara'); //colocar para remover a classe antes de ativar a função error senão quando for acionada a função ainda não terá removido a classe e não funcionará
         error(false, 2);
-        mes.style.border = '';
+        mes.elementos().style.border = '';
     }
 
 }
 
 function errorYear(){
-    const ano = document.querySelector('#data-ano');
+    const ano = new DomElement('#data-ano')
     
-    if(ano.value.length > 4 || ano.value.length <= 0){
+    if(ano.elementos().value.length > 4 || ano.elementos().value.length <= 0){
         error(true, 2);
-        ano.style.border = '1px solid var(--vermelho)';
-        ano.classList.add('compara');
+        ano.elementos().style.border = '1px solid var(--vermelho)';
+        ano.elementos().classList.add('compara');
     }
     else{
-        ano.classList.remove('compara'); //colocar para remover a classe antes de ativar a função error senão quando for acionada a função ainda não terá removido a classe e não funcionará
+        ano.elementos().classList.remove('compara'); //colocar para remover a classe antes de ativar a função error senão quando for acionada a função ainda não terá removido a classe e não funcionará
         error(false, 2);
-        ano.style.border = '';
+        ano.elementos().style.border = '';
     }
 }
 
 function errorCVC(){
-    const cvc = document.querySelector('#cvc');
+    const cvc = new DomElement('#cvc')
 
-    if(cvc.value.length < 3 || cvc.value.length > 3){
+    if(cvc.elementos().value.length < 3 || cvc.elementos().value.length > 3){
         error(true, 3);
-        cvc.style.border = '1px solid var(--vermelho)';
+        cvc.elementos().style.border = '1px solid var(--vermelho)';
     }
     else{
         error(false, 3);
-        cvc.style.border = '';
+        cvc.elementos().style.border = '';
     }
 }
 
