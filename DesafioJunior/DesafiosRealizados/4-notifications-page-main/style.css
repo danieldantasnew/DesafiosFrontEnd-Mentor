@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*CORES PRIMÁRIA */
+    --vermelho: hsl(1, 90%, 64%);
+    --azul: hsl(219, 85%, 26%);
+
+    /*CORES NEUTRAS */
+
+    --branco: hsl(0, 0%, 100%);
+    --azul-mt-claro-acinzentado: hsl(210, 60%, 98%);
+    --azul-claro-acinzentado-1: hsl(211, 68%, 94%);
+    --azul-claro-acinzentado-2: hsl(205, 33%, 90%);
+    --azul-acinzentado: hsl(219, 14%, 63%);
+    --azul-escuro-acinzentado: hsl(219, 12%, 42%);
+    --azul-mt-escuro-acinzentado: hsl(224, 21%, 14%);
+}
+
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+#notification{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+    background-color: var(--branco);
+}
+
+.information{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+}
+
+.note{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.note h3{
+    font-size: 1.2rem;
+    color: var(--azul-mt-escuro-acinzentado);
+}
+
+.note p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    height: 22px;
+    width: 28px;
+    background-color: var(--azul);
+    color: var(--branco);
+}
+
+#mark-read{
+    margin-left: 8px;
+    font-size: 0.760rem;
+    color: var(--azul-escuro-acinzentado);
+    cursor: pointer;
+}
+
+#mark-read:hover{
+    color: var(--azul);
+}
+
+.container{
+    margin-top: 2.5vh;
+    padding: 0 18px;
+}
+
+.card{
+    width: 100%;
+    height: 70px;
+    max-height: 200px;
+    display: grid;
+    grid-template-columns: 80px 2fr;
+    margin-bottom: 1vh;
+    border-radius: 4px;
+}
+
+.card.active{
+    background-color: var(--azul-mt-claro-acinzentado);
+}
+
+.photo-profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-profile img{
+    max-width: 50%;
+}
+
+.information-user{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.org-names{
+    display: flex;
+    gap: 4px;
+    margin-top: 22px;
+}
+
+.name{
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--azul-mt-escuro-acinzentado);
+
+}
+
+.information-user p{
+    font-size: 0.8rem;
+    color: var(--azul-escuro-acinzentado);
+}
+
+.time{
+    color: var(--azul-acinzentado) !important;
+    margin-bottom: 8px;
+}
