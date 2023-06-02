@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
   <title>Notifications</title>
 </head>
 <body>
@@ -12,56 +13,52 @@
     <div class="information">
       <div class="note">
         <h3>Notifications</h3>
-        <p>3</p>
+        <p id="note-js">3</p>
       </div>
 
-      <p id="mark-read">Mark all as read</p>
+      <p id="mark-read" class="mark-read-js">Mark all as read</p>
     </div>
 
     <section class="container">
-      <div class="card active">
+      <div class="card active card-js">
         <div class="photo-profile"><img src="assets/images/avatar-mark-webber.webp" alt="photo-profile"></div>
 
         <div class="information-user">
           <div class="org-names">
-            <div class="name">Mark Webber</div>
-            <p>reacted to your recent post</p>
+            <p><strong class="name">Mark Webber</strong> reacted to your recent post</p>
             <p class="action">My first tournament today!</p>
-            <div class="point-notification-unread"></div>
+            <div class="point-notification-unread active"></div>
           </div>
           <p class="time">1m ago</p>
         </div>
       </div>
-      <div class="card active">
+      <div class="card active card-js">
         <div class="photo-profile"><img src="assets/images/avatar-angela-gray.webp" alt="photo-profile"></div>
         <div class="information-user">
           <div class="org-names">
-            <div class="name">Angela Gray</div>
-            <p>followed you</p>
-            <div class="point-notification-unread"></div>
+            <p><strong class="name">Angela Gray</strong> followed you</p>
+            <div class="point-notification-unread active"></div>
           </div>
           <p class="time">5m ago</p>
         </div>
       </div>
-      <div class="card active">
+      <div class="card active card-js">
         <div class="photo-profile"><img src="assets/images/avatar-jacob-thompson.webp" alt="photo-profile"></div>
         <div class="information-user">
           <div class="org-names">
-            <div class="name">Jacob Thompson</div>
-            <p>has joined your group</p>
+            <p><strong class="name">Jacob Thompson</strong> has joined your group</p>
             <p class="action">Chess Club</p>
-            <div class="point-notification-unread"></div>
+            <div class="point-notification-unread active"></div>
           </div>
           <p class="time">1 day ago</p>
         </div>
       </div>
-      <div class="card">
+      <div class="card card-js">
         <div class="photo-profile"><img src="assets/images/avatar-rizky-hasanuddin.webp" alt="photo-profile"></div>
 
         <div class="information-user">
           <div class="org-names">
-            <div class="name">Rizky Hasanuddin</div>
-            <p>sent you a private message</p>
+            <p><strong class="name">Rizky Hasanuddin</strong> sent you a private message</p>
             <p class="action"></p>
             <div class="point-notification-unread"></div>
           </div>
@@ -69,36 +66,34 @@
           <div class="messenger">  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</div>
         </div>
       </div>
-      <div class="card">
+      <div class="card image card-js">
         <div class="photo-profile"><img src="assets/images/avatar-kimberly-smith.webp" alt="photo-profile"></div>
         <div class="information-user">
           <div class="org-names">
-            <div class="name">Kimberly Smith</div>
-            <p>commented on your picture</p>
+            <p><strong class="name">Kimberly Smith</strong> commented on your picture</p>
             <p class="action"></p>
             <div class="point-notification-unread"></div>
           </div>
           <p class="time">1 week ago</p>
         </div>
+        <div class="picture"></div>
       </div>
-      <div class="card">
+      <div class="card card-js">
         <div class="photo-profile"><img src="assets/images/avatar-nathan-peterson.webp" alt="photo-profile"></div>
         <div class="information-user">
           <div class="org-names">
-            <div class="name">Nathan Peterson</div>
-            <p>has joined your group</p>
+            <p><strong class="name">Nathan Peterson</strong> has joined your group</p>
             <p class="action">5 end-game strategies to increase your win rate</p>
             <div class="point-notification-unread"></div>
           </div>
           <p class="time">2 weeks ago</p>
         </div>
       </div>
-      <div class="card">
+      <div class="card card-js">
         <div class="photo-profile"><img src="assets/images/avatar-anna-kim.webp" alt="photo-profile"></div>
         <div class="information-user">
           <div class="org-names">
-            <div class="name">Anna Kim</div>
-            <p>left the group</p>
+            <p><strong class="name">Anna Kim</strong> left the group</p>
             <p class="action">Chess Club</p>
             <div class="point-notification-unread"></div>
           </div>
@@ -107,5 +102,6 @@
       </div>
     </section>
   </section>
+  <script src="interation.js"></script>
 </body>
 </html>
