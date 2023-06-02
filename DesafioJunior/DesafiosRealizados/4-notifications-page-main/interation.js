@@ -58,6 +58,7 @@ function readCard(){
     function read(element){
         element.currentTarget.classList.remove('active')
         counter();
+        pointRead();
     }
 
     cards.element().forEach((card)=>{
@@ -65,6 +66,17 @@ function readCard(){
     });
 }
 
+function pointRead(){
+    const cardsRemove = new SelectorAllRemove('.card-js')
+    const markRemove = new SelectorAllRemove('.point-notification-unread');
+    
+    cardsRemove.element().forEach((card,index) =>{
+        if(!card.classList.contains('active')){
+            markRemove.element()[index].classList.remove('active')
+    }});
+}
+
+pointRead();
 markAsRead();
 counter();
 readCard();
