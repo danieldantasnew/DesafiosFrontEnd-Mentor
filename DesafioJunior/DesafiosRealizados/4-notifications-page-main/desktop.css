@@ -1,0 +1,38 @@
+@media (min-width: 600px) {
+    .note h3{
+        font-size: 1.3rem;
+    }
+    
+    .note p{
+        font-size: 1rem;
+    }
+
+    #mark-read{
+        font-size: 0.85rem;
+    }
+
+    .photo-profile img{
+        max-width: 80%;
+    }
+
+    .name{
+        font-size: 0.8rem;
+    }
+
+    .information-user p{
+        font-size: 0.8rem;
+    }
+
+    .time{
+        font-size: 0.8rem !important;
+    }
+    
+    .messenger{
+        font-size: 0.8rem;
+    }
+
+    .picture{
+        height: 34px;
+        width: 34px;
+    }
+}

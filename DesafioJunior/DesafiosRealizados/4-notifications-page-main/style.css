@@ -97,10 +97,6 @@ body{
     background-color: var(--azul-mt-claro-acinzentado);
 }
 
-.card:hover{
-    background-color: var(--azul-claro-acinzentado-2);
-}
-
 .photo-profile{
     display: flex;
     align-items: flex-start;
@@ -132,7 +128,10 @@ body{
     font-size: 0.7rem;
     font-weight: 800;
     color: var(--azul-mt-escuro-acinzentado);
+}
 
+.name:hover{
+    color: var(--azul);
 }
 
 .information-user p{
@@ -141,6 +140,12 @@ body{
 }
 
 .action{
+    cursor: pointer;
+    color: var(--azul-escuro-acinzentado);
+    font-weight: 800;
+}
+
+.action:hover{
     color: var(--azul);
     font-weight: 800;
 }
@@ -173,6 +178,10 @@ body{
     color: var(--azul-escuro-acinzentado);
 }
 
+.messenger:hover{
+    background-color: var(--azul-claro-acinzentado-1);
+}
+
 .image{
     display: grid;
     grid-template-columns: 40px minmax(100px, 300px) 1fr;
@@ -185,4 +194,5 @@ body{
     background-size: contain;
     margin-left: 6px;
     align-self: center;
+    cursor: pointer;
 }
