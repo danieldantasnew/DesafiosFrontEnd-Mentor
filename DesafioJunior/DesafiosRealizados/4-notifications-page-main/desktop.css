@@ -5,6 +5,8 @@
     
     .note p{
         font-size: 1rem;
+        height: 22px;
+        width: 28px;
     }
 
     #mark-read{
