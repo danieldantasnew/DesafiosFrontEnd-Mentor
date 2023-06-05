@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --azul-a: hsl(228, 45%, 44%);
+    
+    /* PRIMÁRIAS */
+
+    --azul: hsl(246, 80%, 60%); 
+    --vermelho-claro: hsl(15, 100%, 70%); /*Work*/
+    --azul-suave: hsl(195, 74%, 62%); /*play*/
+    --vermelho-claro-2:  hsl(348, 100%, 68%); /*Study*/
+    --verde-limao: hsl(145, 58%, 55%); /*exercise*/
+    --violeta: hsl(264, 64%, 52%); /*social*/
+    --laranja-suave: hsl(43, 84%, 65%); /*self care*/
+
+    /* CORES NEUTRAS */
+
+    --azul-mt-escuro: hsl(226, 43%, 10%);
+    --azul-escuro: hsl(235, 46%, 20%);
+    --azul-desaturado: hsl(235, 45%, 61%);
+    --azul-palido: hsl(236, 100%, 87%);
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+    height: 100vh;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    height: 100%;
+    width: 100%;
+    background-color: var(--azul-mt-escuro);
+}
+
+.design-card{
+    color: white; /*temporario*/
+    width: 14rem;
+    border-radius: 10px;
+    margin: 0 8px;
+}
+
+.card-profile{
+    margin-top: 6.5vh;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    align-items: center;
+    gap: 0px;
+    height: 8.8rem;
+    background-color: var(--azul-escuro);
+}
+
+.top-card{
+    background-color: var(--azul);
+    color: white;
+    height: 6rem;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.photo{
+    background-image: url(images/image-jeremy.png);
+    height: 45px;
+    width: 45px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self: center;
+    justify-self: center;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.name{
+    font-size: 0.7rem;
+    color: var(--azul-palido);
+    font-weight: 300;
+    line-height: 14px;
+}
+
+.name-user{
+    font-size: 1rem;
+    color: var(--azul-palido);
+    font-weight: 400;
+}
+
+.bottom-card{
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.75rem;
+    padding: 0 6px;
+    color: var(--azul-a);
+}
+
+.bottom-card p:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.card{ 
+    position: relative;
+    height: 7rem;
+}
+
+.top-card-side{
+    border-radius: 10px;
+    background-color: var(--vermelho-claro);
+    display: flex;
+    justify-content: end;
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 40%;
+}
+
+.top-card-side img{
+    height: 40px;
+    margin-right: 12px;
+}
+
+.bottom-card-side{
+    background-color: var(--azul-escuro);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    z-index: 1000;
+    bottom: 22px;
+    padding: 0 14px
+}
+
+.side-left h3{
+    font-size: 0.6rem;
+    font-weight: 400;
+}
+
+.side-left p{
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: white;
+}
+
+.side-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.local-botao{
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.botao{
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.botao::before{
+    content: '';
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.botao::after{
+    content: '';
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.side-right p{
+    font-size: 0.55rem;
+    font-weight: 400;
+    color: var(--azul-palido);
+}
