@@ -1,0 +1,26 @@
+@media (min-width: 980px) {
+    .cards{
+        height: 400px;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .collection-card{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .card-profile{
+        margin-top: 6.5vh;
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+        align-items: center;
+        gap: 0px;
+        height: 100%;
+        background-color: var(--azul-escuro);
+    }
+}
