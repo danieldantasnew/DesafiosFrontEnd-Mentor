@@ -31,6 +31,9 @@ body{
     font-family: 'Rubik', sans-serif;
     height: 100vh;
     background-color: var(--azul-mt-escuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cards{
@@ -67,7 +70,6 @@ body{
 
 .top-card{
     background-color: var(--azul);
-    color: white;
     height: 6rem;
     border-radius: 10px;
     display: grid;
@@ -88,15 +90,14 @@ body{
 }
 
 .name{
-    font-size: 0.7rem;
+    align-self: center;
+    justify-self: center;
     color: var(--azul-palido);
-    font-weight: 300;
-    line-height: 14px;
 }
 
 .name-user{
     font-size: 1rem;
-    color: var(--azul-palido);
+    color: white;
     font-weight: 400;
 }
 
@@ -126,7 +127,6 @@ body{
     position: absolute;
     width: 100%;
     height: 60%;
-    position: relative;
     overflow: hidden;
 }
 
