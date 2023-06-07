@@ -59,6 +59,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: stretch;
         gap: 12px;
         height: 100%;
         overflow: hidden;
@@ -101,17 +102,29 @@
         padding: 4px 14px;
     }
 
+    .side-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+
     .side-left h3{
         font-size: 0.6rem;
         font-weight: 400;
     }
     
-    .side-left p{
+    .hours{
         font-size: 1.5rem;
         line-height: 48px;
     }
 
-    .side-right p{
-        font-size: 0.5rem;
+    .design-last-week{
+        font-size: 0.5rem !important;
+    }
+
+    .side-right{
+        margin-top: 14px; /*verificar alinhamento com o topo do item com js*/
+        margin-bottom: 0px;
     }
 }
