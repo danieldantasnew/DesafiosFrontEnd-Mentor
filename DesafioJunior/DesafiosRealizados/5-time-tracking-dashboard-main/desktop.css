@@ -107,6 +107,8 @@
         flex-direction: column;
         justify-content: flex-end;
         margin-top: 10px;
+        gap: 0;
+        height: auto;
     }
 
     .side-left h3{
@@ -121,10 +123,12 @@
 
     .design-last-week{
         font-size: 0.5rem !important;
+        margin-top: -4px;
     }
 
     .side-right{
-        margin-top: 14px; /*verificar alinhamento com o topo do item com js*/
+        margin-top: 14.1px;
         margin-bottom: 0px;
+        height: auto;
     }
 }

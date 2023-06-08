@@ -209,7 +209,12 @@ body{
 }
 
 .side-left{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    gap: 10px;
 }
 
 .side-left h3{
@@ -220,16 +225,15 @@ body{
 .hours{
     font-size: 1.1rem;
     font-weight: 300;
-    line-height: 28px;
+    line-height: 13.5px;
     color: white;
 }
 
 .side-right{
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
 }
 
 .local-botao{
@@ -246,4 +250,5 @@ body{
     font-size: 0.55rem;
     font-weight: 400;
     color: var(--azul-palido);
+    margin-top: 7px;
 }

@@ -21,3 +21,16 @@ window.onresize = ()=>{
 }
 
 toggleLayout();
+
+// function calcula(){
+//     const botao = document.querySelector('.local-botao')
+//     const work = document.querySelector('.side-left-js h3')
+
+//     const alturaBotao = botao.getBoundingClientRect()
+//     const alturaWork = work.getBoundingClientRect()
+    
+//     console.log(alturaBotao.top)
+//     console.log(alturaWork.top)
+// }
+
+// calcula()
