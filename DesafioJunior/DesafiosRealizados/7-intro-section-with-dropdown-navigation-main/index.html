@@ -3,10 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
   <link rel="stylesheet" href="./css/all.css">
   <title>Desafio 7</title>
 </head>
 <body>
-  
+  <section class="main">
+    <menu class="menu">
+      <div class="menu-side-left">
+        <div class="logo"></div>
+      </div>
+
+      <div class="menu-side-right" data-menu="rightSide">
+        <div class="btn-menu" data-menu="botao-menu"><span id="ham"></span></div>
+        <ul class="nav" data-menu="lista-menu">
+          <li class="options-design"><p>Features</p> <img src="images/icon-arrow-down.svg"></li>
+          <li class="options-design"><p>Company</p> <img src="images/icon-arrow-down.svg"></li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+        <div class="botoes">
+          <button id="btn-login" class="design-btn" data-menu="botao-login">Login</button>
+          <button id="btn-register" class="design-btn" data-menu="botao-register">Register</button>
+        </div>
+      </div>
+    </menu>
+  </section>
+
+  <section class="modal" data-menu></section>
+  <script type="module" src="./js/all.js"></script>
 </body>
 </html>
