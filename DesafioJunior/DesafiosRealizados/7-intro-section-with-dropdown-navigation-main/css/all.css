@@ -24,3 +24,7 @@ body{
     background-color: var(--quase-branco);
     position: relative;
 }
+
+ul{
+    list-style: none;
+}

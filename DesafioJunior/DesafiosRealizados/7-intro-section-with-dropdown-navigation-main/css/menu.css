@@ -75,7 +75,7 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 18px;
-    padding: 15px 0px 0px 14px;
+    padding: 15px 0px 0px 20px;
     box-shadow: 0px 0px 8px 1px rgba(0,0,0,.1);
     animation: efeitoMenu .3s forwards;
     overflow: hidden;
@@ -105,8 +105,9 @@
     display: flex;
     flex-direction: column;
     gap: 18px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
+    width: 100%;
 }
 
 .nav li{
@@ -146,7 +147,7 @@
     height: 40px;
     width: 80%;
     border-radius: 12px;
-    font-size: 0..8rem;
+    font-size: 0.8rem;
     color: var(--cinza-medio);
     background-color: var(--quase-branco);
     font-weight: 500;
@@ -171,7 +172,7 @@
 }
 
 #btn-register:hover{
-    background-color: hsla(0, 2%, 92%, 0.658);
+    background-color: rgba(231, 231, 231, 0.774);
     border: 2px solid var(--cinza-medio);
 }
 
@@ -183,4 +184,44 @@
     top: 0;
     left: 0;
     z-index: 1000;
+}
+
+/* FEATURES */
+
+.list{
+    display: none;
+}
+
+.list.active{
+    display: block;
+}
+
+.list.active .design-list{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    margin: 12px 1.55rem;
+    font-size: 0.9rem;
+    animation: showTop .3s forwards;
+    overflow: hidden;
+}
+
+.list.active .list-features li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@keyframes showTop {
+    from{
+        opacity: 0;
+        height: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        height: 100%;
+        transform: translateY(0px);
+    }
 }
