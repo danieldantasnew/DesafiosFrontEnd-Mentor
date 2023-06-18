@@ -1,0 +1,41 @@
+.footer{
+    width: 100%;
+}
+
+.list-footer{
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 12px;
+}
+
+.img-footer{
+    height: 24px;
+    width: 64px;
+}
+
+#img-1{
+    background: url('../images/client-databiz.svg') no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#img-2{
+    background: url('../images/client-audiophile.svg') no-repeat;   
+    background-position: center;
+    background-size: contain;
+}
+
+#img-3{
+    background: url('../images/client-meet.svg') no-repeat; 
+    background-size: contain;
+    background-position: center;
+}
+
+#img-4{
+    background: url('../images/client-maker.svg') no-repeat;   
+    background-size: contain;
+    background-position: center;
+}

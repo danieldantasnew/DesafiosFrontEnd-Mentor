@@ -1,8 +1,9 @@
-import * as clickMenu from "./dropdownItens.js";
+import * as dropDownFunction from "./dropdownItens.js";
 
 export default function initMenuMobile(){
     const rightSide = document.querySelectorAll('[data-menu]');
     const botaoMenu = document.querySelector('[data-menu="botao-menu"]')
+    const dropdown = document.querySelectorAll('[data-dropDown]');
     const modal = document.querySelector('[data-menu="modal"]');
 
     botaoMenu.addEventListener('click', handleMenu);
@@ -13,22 +14,8 @@ export default function initMenuMobile(){
             item.classList.toggle('active');
         })
 
-        if(!botaoMenu.classList.contains('active')){
-            const novoAtributo = 'images/icon-arrow-up.svg';
-            const velhoAtributo = 'images/icon-arrow-down.svg';
-
-            clickMenu.dropdown.forEach(item=>{
-                item.classList.remove('active');
-                item.nextElementSibling.classList.remove('active');
-
-                if(item.classList.contains('active')){
-                    this.lastChild.setAttribute('src', novoAtributo);
-                }
-                else{
-                    item.lastChild.setAttribute('src', velhoAtributo);
-                }
-            }); 
-        }
+        dropDownFunction.removeClasse(botaoMenu,dropdown);
     }
 }
 
+//OTIMIZAR CÓDIGO DO MENU USANDO APENAS O BOTA RIGHTSIDE E VERIFICANDO SE O EVENT TARGET CONTEM NO RIGHT SIDE. RIGHT SIDE ESTA FUNCIONANDO COMO UM HTML PARA ESSE LADO DIREITO POIS ELE PEGA TODOS OS ATRIBUTOS COM DATA-MENU INCLUSIVE O MODAL

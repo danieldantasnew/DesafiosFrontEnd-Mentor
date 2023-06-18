@@ -1,4 +1,4 @@
-export default function dropDownItens(){
+export function dropDownItens(){
     const dropdown = document.querySelectorAll('[data-dropDown]');
 
     dropdown.forEach((item)=>{
@@ -21,4 +21,21 @@ export default function dropDownItens(){
     }
 }
 
-export const dropdown = document.querySelectorAll('[data-dropDown]');
+export function removeClasse(botaoMenu, dropdown){
+    if(!botaoMenu.classList.contains('active')){
+        const novoAtributo = 'images/icon-arrow-up.svg';
+        const velhoAtributo = 'images/icon-arrow-down.svg';
+
+        dropdown.forEach(item=>{
+            item.classList.remove('active');
+            item.nextElementSibling.classList.remove('active');
+
+            if(item.classList.contains('active')){
+                this.lastChild.setAttribute('src', novoAtributo);
+            }
+            else{
+                item.lastChild.setAttribute('src', velhoAtributo);
+            }
+        }); 
+    }
+}

@@ -1,5 +1,5 @@
 import initMenuMobile from "./modules/menu.js";
-import dropDownItens from "./modules/dropdownItens.js";
+import * as dropDown from "./modules/dropdownItens.js";
 
 initMenuMobile();
-dropDownItens();
+dropDown.dropDownItens();
