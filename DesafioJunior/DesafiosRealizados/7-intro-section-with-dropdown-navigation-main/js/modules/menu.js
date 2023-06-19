@@ -5,9 +5,12 @@ export default function initMenuMobile(){
     const botaoMenu = document.querySelector('[data-menu="botao-menu"]')
     const dropdown = document.querySelectorAll('[data-dropDown]');
     const modal = document.querySelector('[data-menu="modal"]');
+    const events = ['click', 'touchstart'];
 
-    botaoMenu.addEventListener('click', handleMenu);
-    modal.addEventListener('click', handleMenu);
+    events.forEach(evento=>{
+        botaoMenu.addEventListener(evento, handleMenu);
+        modal.addEventListener(evento, handleMenu);
+    })
 
     function handleMenu(){
         rightSide.forEach((item)=>{
