@@ -5,7 +5,7 @@ export default function initMenuMobile(){
     const botaoMenu = document.querySelector('[data-menu="botao-menu"]')
     const dropdown = document.querySelectorAll('[data-dropDown]');
     const modal = document.querySelector('[data-menu="modal"]');
-    const events = ['click', 'touchstart'];
+    const events = ['click'];
 
     events.forEach(evento=>{
         botaoMenu.addEventListener(evento, handleMenu);

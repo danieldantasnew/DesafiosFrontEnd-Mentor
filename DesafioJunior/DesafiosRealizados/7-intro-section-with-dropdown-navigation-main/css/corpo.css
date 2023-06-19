@@ -46,3 +46,20 @@
 .info-main button:hover{
     background-color: rgba(0,0,0,.75);
 }
+
+
+@media (min-width: 535px) {
+    .image-main{
+        background-size: cover;
+        background-position: top;
+    }
+}
+
+
+@media (min-width: 788px) {
+    .image-main{
+        background: url('../images/image-hero-desktop.png') no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}

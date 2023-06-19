@@ -1,6 +1,6 @@
 export function dropDownItens(){
     const dropdown = document.querySelectorAll('[data-dropDown]');
-    const events = ['click', 'touchstart'];
+    const events = ['click'];
     dropdown.forEach((item)=>{
         events.forEach(evento =>{
             item.addEventListener(evento, handleItem);
