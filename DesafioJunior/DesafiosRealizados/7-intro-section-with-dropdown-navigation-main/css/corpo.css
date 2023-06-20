@@ -1,3 +1,5 @@
+@import url('./footer.css');
+
 .corpo{
     display: grid;
     grid-template-rows: 2fr 1fr;
@@ -56,10 +58,61 @@
 }
 
 
-@media (min-width: 788px) {
+@media (min-width: 789px) {
+    .corpo{
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(300px, 400px) 1fr;
+        grid-template-areas: "info imagem"
+        "footer imagem";
+        height: calc(100% - 50px);
+    }
+    
     .image-main{
         background: url('../images/image-hero-desktop.png') no-repeat;
         background-size: contain;
         background-position: center;
+        order: 1;
+        grid-area: imagem;
+    }
+
+    .info-main{
+        margin-top: 24px;
+
+        gap: 24px;
+        order: 0;
+        grid-area: info;
+    }
+
+    .info-main h2{
+        font-size: 3.2rem
+    }
+    
+    .info-main p{
+        font-size: 1rem;
+        width: 90%;
+        color: var(--cinza-medio);
+        line-height: 24px;    
+    }
+
+    .footer{
+        width: 100%;
+        order: 2;
+        grid-area: footer;
+    }
+    
+    .list-footer{
+        margin-top: 5vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .img-footer{
+        height: 24px;
+        width: 64px;
     }
 }

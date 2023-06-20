@@ -1,24 +1,28 @@
 export function dropDownItens(){
     const dropdown = document.querySelectorAll('[data-dropDown]');
+    const drop = document.querySelectorAll('[data-drop]')
     const events = ['click'];
-    dropdown.forEach((item)=>{
+
+    dropdown.forEach((item, index)=>{
         events.forEach(evento =>{
-            item.addEventListener(evento, handleItem);
+            item.addEventListener(evento, ()=>{
+                handleItem(event, index)
+            });
         })
     });
     
-    function handleItem(event){
+    function handleItem(event, index){
         const novoAtributo = 'images/icon-arrow-up.svg';
         const velhoAtributo = 'images/icon-arrow-down.svg';
+
+        event.currentTarget.classList.toggle('active');
+        drop[index].classList.toggle('active');
     
-        this.classList.toggle('active');
-        this.nextElementSibling.classList.toggle('active');
-    
-        if(this.classList.contains('active')){
-            this.lastChild.setAttribute('src', novoAtributo);
+        if(event.currentTarget.classList.contains('active')){
+            event.currentTarget.lastChild.setAttribute('src', novoAtributo);
         }
         else{
-            this.lastChild.setAttribute('src', velhoAtributo);
+            event.currentTarget.lastChild.setAttribute('src', velhoAtributo);
         }
     }
 }
