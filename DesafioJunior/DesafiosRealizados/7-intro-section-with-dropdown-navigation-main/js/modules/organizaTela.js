@@ -1,22 +1,22 @@
 export default function organizaTela(){
-    const menu = document.querySelector('[data-tela="menu"]');
-    const botoes = document.querySelector('[data-tela="botoes"]');
-    const sideRight = document.querySelector('[data-menu="rightSide"]');
-    let tamTela = window.matchMedia('(min-width: 789px)').matches;
-    
-    verificaTela(tamTela, menu, sideRight, botoes);
-    
-    
-    window.onresize = ()=>{
-        let tamTela = window.matchMedia('(min-width: 789px)').matches;
-        verificaTela(tamTela, menu, sideRight, botoes);
-    }
 
-    function alteraDropdown(){
+    function organizaLayoutMobile(){
+        const menu = document.querySelector('[data-tela="menu"]');
+        const botoes = document.querySelector('[data-tela="botoes"]');
+        const sideRight = document.querySelector('[data-menu="rightSide"]');
         
+        verificaTela(menu, sideRight, botoes);
+        
+        
+        window.onresize = ()=>{
+            verificaTela(menu, sideRight, botoes);
+        }
+    
     }
     
-    function verificaTela(tamTela, elementoPai, elementoPai2, elementoFilho){
+    function verificaTela(elementoPai, elementoPai2, elementoFilho){
+        let tamTela = window.matchMedia('(min-width: 789px)').matches;
+
         if(tamTela){
             elementoPai.appendChild(elementoFilho);
         }
@@ -24,5 +24,7 @@ export default function organizaTela(){
             elementoPai2.appendChild(elementoFilho);
         }
     }
+
+    organizaLayoutMobile();
 }
 
