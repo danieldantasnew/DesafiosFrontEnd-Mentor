@@ -1,3 +1,5 @@
+import * as alteraDropdown from './dropdownItens.js'
+
 export default function organizaTela(){
 
     function organizaLayoutMobile(){
@@ -10,6 +12,7 @@ export default function organizaTela(){
         
         window.onresize = ()=>{
             verificaTela(menu, sideRight, botoes);
+            alteraDropdown.alteraDropdown();
         }
     
     }

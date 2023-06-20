@@ -25,26 +25,8 @@ export function dropDownItens(){
             event.currentTarget.lastChild.setAttribute('src', velhoAtributo);
         }
     }
-
-    function alteraDropdown(){
-        const dropdownPai = document.querySelectorAll('[data-dropDown]');
-        
-        const dropFilho = document.querySelectorAll('[data-drop]');
-        const dropPaiLista = document.querySelector('[data-menu="lista-menu"]');
-        let tamTela = window.matchMedia('(min-width: 789px)').matches;
-
-        if(tamTela){
-            
-            dropdownPai.forEach((dropPai,index) =>{
-                const primeiroFilhoIda = dropPai.firstChild;
-                console.log(primeiroFilhoIda)
-                // dropPai.insertBefore(primeiroFilhoIda, dropFilho[index]); //provavelmente ele está dizendo que o dropFilho não é filho dele, então tenho q falar com o paai dele antes para colocar ele no outro elemento. Verificaar como funionar insertBefore
-            });
-        }
-
-    }
-
-    alteraDropdown()
+    
+    alteraDropdown();
 }
 
 export function removeClasse(botaoMenu, dropdown){
@@ -63,5 +45,25 @@ export function removeClasse(botaoMenu, dropdown){
                 item.lastChild.setAttribute('src', velhoAtributo);
             }
         }); 
+    }
+}
+
+export function alteraDropdown(){
+    const dropdownPai = document.querySelectorAll('[data-dropDown]');
+    const dropFilho = document.querySelectorAll('[data-drop]');
+    const dropPaiLista = document.querySelector('[data-menu="lista-menu"]');
+    const insereAntesLista = document.querySelectorAll('[data-before]');
+    let tamTela = window.matchMedia('(min-width: 789px)').matches;
+
+
+    if(tamTela){
+        dropdownPai.forEach((dropPai,index) =>{
+            const primeiroFilhoIda = dropPai.firstChild;
+            dropPai.insertBefore(dropFilho[index], primeiroFilhoIda);
+        });
+    }
+    else{
+        dropPaiLista.insertBefore(dropFilho[0],insereAntesLista[0]);
+        dropPaiLista.insertBefore(dropFilho[1],insereAntesLista[1]);
     }
 }
