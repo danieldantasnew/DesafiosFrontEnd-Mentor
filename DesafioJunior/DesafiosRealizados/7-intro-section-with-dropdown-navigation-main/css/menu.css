@@ -190,12 +190,39 @@
 
 .list{
     display: none;
+    overflow: hidden;
 }
 
 .list.active{
     display: block;
-    animation: showTop .3s forwards;
-    overflow: hidden;
+    animation: teste .3s;
+}
+
+@keyframes teste {
+    from{
+        opacity: 0;
+        height: 0;
+    }
+    to{
+        height: 140px;
+        opacity: 1;
+    }
+}
+
+#options-design-item-2{  
+    width: 117px;
+    animation: teste2 .3s;
+}
+
+@keyframes teste2 {
+    from{
+        opacity: 0;
+        height: 0;
+    }
+    to{
+        height: 100px;
+        opacity: 1;
+    }
 }
 
 .list.active .design-list{
@@ -211,19 +238,6 @@
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-@keyframes showTop {
-    from{
-        opacity: 0;
-        height: 0;
-        transform: translateY(-10px);
-    }
-    to{
-        opacity: 1;
-        height: 200px;
-        transform: translateY(0px);
-    }
 }
 
 @media (min-width: 789px) {
@@ -271,6 +285,34 @@
         display: none;
     }
     
+    .options-design:hover .list{
+        display: block;
+        position: absolute;
+        left: -55px;
+        top: 4vh;
+        background-color: white;
+        box-shadow: 0px 0px 14px 0px rgba(0,0,0,.1);
+        border-radius: 8px;
+        width: 140px;
+        height: 160px;
+        animation: teste .3s;
+    }
+
+    .options-design:hover .list .design-list{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        margin: 18px 10px 0px 10px;
+        justify-content: center;
+        font-size: 0.9rem;
+    }
+
+    .options-design:hover .list-features li{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
     .list.active {
         position: absolute;
         left: -55px;
@@ -283,16 +325,37 @@
     }
     
     .list.active .design-list{
-        margin: 0;
-        margin-left: 8px;
+        margin: 18px 10px 0px 10px;
         justify-content: center;
         font-size: 0.9rem;
     }
 
     #options-design-item-2{
         left: 3px;
-        height: 120px;
         width: 117px;
+        height: 120px;
+    }
+
+    @keyframes teste {
+        from{
+            opacity: 0;
+            height: 0;
+        }
+        to{       
+            height: 160px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes teste2 {
+        from{
+            opacity: 0;
+            height: 0;
+        }
+        to{
+            height: 120px;
+            opacity: 1;
+        }
     }
 
     .list-company li{
