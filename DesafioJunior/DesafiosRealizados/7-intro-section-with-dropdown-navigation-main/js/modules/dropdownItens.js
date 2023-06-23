@@ -12,18 +12,10 @@ export function dropDownItens(){
     });
     
     function handleItem(event, index){
-        const novoAtributo = 'images/icon-arrow-up.svg';
-        const velhoAtributo = 'images/icon-arrow-down.svg';
-
         event.currentTarget.classList.toggle('active');
         drop[index].classList.toggle('active');
-    
-        if(event.currentTarget.classList.contains('active')){
-            event.currentTarget.lastChild.setAttribute('src', novoAtributo);
-        }
-        else{
-            event.currentTarget.lastChild.setAttribute('src', velhoAtributo);
-        }
+        arrowImage(event.currentTarget);
+
     }
     
     alteraDropdown();
@@ -31,19 +23,9 @@ export function dropDownItens(){
 
 export function removeClasse(botaoMenu, dropdown){
     if(!botaoMenu.classList.contains('active')){
-        const novoAtributo = 'images/icon-arrow-up.svg';
-        const velhoAtributo = 'images/icon-arrow-down.svg';
-
         dropdown.forEach(item=>{
             item.classList.remove('active');
             item.nextElementSibling.classList.remove('active');
-
-            if(item.classList.contains('active')){
-                this.lastChild.setAttribute('src', novoAtributo);
-            }
-            else{
-                item.lastChild.setAttribute('src', velhoAtributo);
-            }
         }); 
     }
 }
@@ -65,5 +47,17 @@ export function alteraDropdown(){
     else{
         dropPaiLista.insertBefore(dropFilho[0],insereAntesLista[0]);
         dropPaiLista.insertBefore(dropFilho[1],insereAntesLista[1]);
+    }
+}
+
+export function arrowImage(item){
+    const novoAtributo = 'images/icon-arrow-up.svg';
+    const velhoAtributo = 'images/icon-arrow-down.svg';
+
+    if(item.classList.contains('active')){
+        item.lastChild.setAttribute('src', novoAtributo);
+    }
+    else{
+        item.lastChild.setAttribute('src', velhoAtributo);
     }
 }
