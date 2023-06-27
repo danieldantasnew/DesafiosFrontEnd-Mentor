@@ -3,7 +3,7 @@ import * as dropDownFunction from "./dropdownItens.js";
 export default function outsideClick(){
     let tamTela = window.matchMedia('(min-width: 789px)').matches;
     const dropdownItens = document.querySelectorAll('[data-dropDown]');
-    const lista = document.querySelectorAll('[data-drop]')
+    const lista = document.querySelectorAll('[data-drop]');
     const html = document.documentElement;
     const elementos = {
         element: '',
@@ -21,11 +21,11 @@ export default function outsideClick(){
         
         function fechaListaMenu(event){
             if(!elementos.element.contains(event.target)){
-                lista[0].classList.remove('active');
-                lista[1].classList.remove('active');
-                dropdownItens[0].classList.remove('active');
-                dropdownItens[1].classList.remove('active');
-                dropDownFunction.arrowImage(elementos.element);
+                dropdownItens.forEach((drop, index) =>{
+                    lista[index].classList.remove('active');
+                    drop.classList.remove('active');
+                    dropDownFunction.arrowImage(drop);
+                });
                 html.removeEventListener('click', fechaListaMenu);
             }     
         }

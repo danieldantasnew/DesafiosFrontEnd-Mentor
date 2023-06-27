@@ -12,10 +12,12 @@ export function dropDownItens(){
     });
     
     function handleItem(event, index){
-        event.currentTarget.classList.toggle('active');
-        drop[index].classList.toggle('active');
-        arrowImage(event.currentTarget);
-
+        if(event.target.hasAttribute('data-atbID')){
+            event.currentTarget.classList.toggle('active');
+            drop[index].classList.toggle('active');
+        }
+        
+        arrowImage(event.currentTarget);    
     }
     
     alteraDropdown();
