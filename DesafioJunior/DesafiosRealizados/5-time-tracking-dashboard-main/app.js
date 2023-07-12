@@ -34,3 +34,23 @@ toggleLayout();
 // }
 
 // calcula()
+
+function dadosJson(){
+    const titulos = document.querySelectorAll('.title');
+    const horas = document.querySelectorAll('.hours');
+    const lastWeek = document.querySelectorAll('.last-week-js');
+
+    async function fetchJson(){
+        const dados = await fetch('./data.json');
+        const dadosJson = await dados.json();
+
+        dadosJson.forEach((objetos, index) =>{
+            titulos[index].innerText = objetos.title;
+            horas[index].innerText = `${objetos.timeframes.weekly.current}hrs`;
+            lastWeek[index].innerText = `Last Week - ${objetos.timeframes.weekly.previous}hrs`;
+        });
+    }
+    fetchJson()
+}
+
+dadosJson()
