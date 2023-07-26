@@ -17,7 +17,14 @@ function DomElement(seletor){
 function callbackCartao(){
     const numCartao = document.querySelector('#numero-cartao-input');
     //formatar com espaços usando expressão regular e retirar as letras e outros caracteres tanto no numero do cartão como no cvc.
+
+    const regex = /\D/g
+    numCartao.value = numCartao.value.replace(regex, '')
+
+    const regexpOrganizaNumero = /(\d{4})(\d{4})(\d{4})(\d{4})/g
+    numCartao.value = numCartao.value.replace(regexpOrganizaNumero, '$1 $2 $3 $4')
 }
+
 
 function error(boolean, index){
     const allErro = document.querySelectorAll('.msg-error');
@@ -37,6 +44,8 @@ function error(boolean, index){
 
 function errorName(){
     const nome = new DomElement('#nome')
+    const regexp = /[^a-z A-Z]+/g
+    nome.elementos().value = nome.elementos().value.replace(regexp, '')
 
     if(nome.elementos().value.length <= 0){
         error(true, 0);
@@ -56,6 +65,7 @@ function errorMonth(){
         error(true, 2);
         mes.elementos().style.border = '1px solid var(--vermelho)';
         mes.addClasse('compara')
+        mes.elementos().value = mes.elementos().value.slice(0,2)
     }
     else{
         mes.removeClasse('compara'); //colocar para remover a classe antes de ativar a função error senão quando for acionada a função ainda não terá removido a classe e não funcionará
@@ -64,9 +74,10 @@ function errorMonth(){
     }
 
 }
-
+//Falta verificar se o vencimento do ano do cartão é menor que o ano atual
 function errorYear(){
     const ano = new DomElement('#data-ano')
+    ano.elementos().value = +ano.elementos().value.slice(0,2);
     
     if(ano.elementos().value.length > 4 || ano.elementos().value.length <= 0){
         error(true, 2);

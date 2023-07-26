@@ -35,7 +35,7 @@
           <p class="msg-error">Can't be blank</p>
         </p>
         <p class="organiza-input">
-          <label for="numero-cartao-input">CARD NUMBER</label>
+          <label for="numero-cartao-input" onchange="callbackCartao()">CARD NUMBER</label>
           <input type="text" id="numero-cartao-input" class="input js-frente-cartao" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" required oninput="callbackCartao()">
           <p class="msg-error">Wrong format, numbers only</p>
         </p>
