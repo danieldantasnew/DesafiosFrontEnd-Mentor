@@ -55,6 +55,7 @@
   left: 16px;
   text-transform: uppercase;
   cursor: pointer;
+  z-index: 3000;
 }
 
 .buttonCreation {

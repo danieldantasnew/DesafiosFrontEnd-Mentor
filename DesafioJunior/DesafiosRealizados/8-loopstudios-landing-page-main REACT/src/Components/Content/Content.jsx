@@ -1,5 +1,5 @@
-import React from 'react';
 import style from './Content.module.css';
+import Card from './Card';
 
 const Content = () => {
 
@@ -45,6 +45,9 @@ const Content = () => {
       image: 'image-fisheye',
     },
   ]
+
+
+
   return (
     <>
       <div className={style.firstContent}>
@@ -56,7 +59,7 @@ const Content = () => {
 
         <div className={style.creations}>
           <h2>Our Creations</h2>
-          {creations && creations.map((creation) => <div key={creation.id} className={style.imagesCreation}><img src={`../../../public/images/mobile/${creation.image}.jpg`} alt={creation.titulo} /><h3>{creation.titulo}</h3></div>
+          {creations && creations.map((creation) => <Card key={creation.id} id={creation.id} classe={style.imagesCreation} titulo={creation.titulo} image={creation.image}/>
           )}
         </div>
 
