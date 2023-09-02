@@ -1,0 +1,44 @@
+.header {
+  height: 80vh;
+  width: 100%;
+  background: url('../../../public/images/mobile/image-hero.jpg') no-repeat top center;
+  background-size: cover;
+}
+
+.logoMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logoA {
+  text-decoration: none;
+  color: var(--branco);
+  font-family: var(--alata);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.imageHamb{
+  background: url('../../../public/images/mobile/icon-hamburger.svg') no-repeat center;
+  background-size: contain;
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+}
+
+.apresentacao {
+  padding: 20px;
+  margin: 9.1rem 24px 24px 24px;
+  border: 2px solid var(--branco);
+}
+
+.apresentacao h2 {
+  color: var(--branco);
+  font-family: var(--josefin);
+  font-size: 2.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 80%;
+}

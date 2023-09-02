@@ -1,0 +1,78 @@
+.firstContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.firstContent h2{
+  font-family: var(--josefin);
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  color: var(--preto);
+  margin-bottom: 24px;
+}
+
+.imageFirstContent {
+  background: url('../../../public/images/mobile/image-interactive.jpg') center no-repeat;
+  background-size: contain;
+  height: 300px;
+  width: 100%;
+  margin: 20px 40px;
+}
+
+.infoFirstContent p{
+  font-family: var(--josefin);
+  font-size: 1rem;
+  text-align: center;
+  margin: 0px 20px;
+  margin-bottom: 5rem;
+}
+
+.imagesCreation {
+  position: relative;
+}
+
+.imagesCreation img {
+  width: 100%;
+  margin: 18px 0;
+  filter: brightness(85%);
+  cursor: pointer;
+}
+
+.imagesCreation h3 {
+  font-size: 1.3rem;
+  font-family: var(--josefin);
+  font-weight: 300;
+  color: var(--branco);
+  width: 35%;
+  position: absolute;
+  bottom: 40px;
+  left: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.buttonCreation {
+  cursor: pointer;
+  padding: 10px 50px;
+  margin: 10px 0px 60px 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: var(--alata);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--preto);
+  background-color: var(--branco);
+  border: 1.5px solid var(--preto);
+}
+
+.buttonCreation:hover {
+  background-color: var(--preto);
+  color: var(--branco);
+  border: 1.5px solid var(--branco);
+}
