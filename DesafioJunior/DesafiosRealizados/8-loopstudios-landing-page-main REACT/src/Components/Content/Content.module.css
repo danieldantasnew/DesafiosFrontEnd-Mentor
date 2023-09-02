@@ -33,13 +33,19 @@
   margin-bottom: 5rem;
 }
 
+.creations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
 .imagesCreation {
   position: relative;
 }
 
 .imagesCreation img {
   width: 100%;
-  margin: 18px 0;
   filter: brightness(85%);
   cursor: pointer;
 }
