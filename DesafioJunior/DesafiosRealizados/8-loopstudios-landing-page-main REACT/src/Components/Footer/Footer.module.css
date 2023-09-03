@@ -1,0 +1,70 @@
+.footer {
+  width: 100%;
+  background-color: var(--preto);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  text-align: center;
+  padding: 4.5rem 0;
+}
+
+.logoFooter {
+  text-decoration: none;
+  color: var(--branco);
+  font-family: var(--alata);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.links li a{
+  color: var(--branco);
+  text-decoration: none;
+  font-family: var(--alata);
+  position: relative;
+}
+
+.links li a::after{
+  content: '';
+  display: flex;
+  width: 0px;
+  height: 2px;
+  left: 27%;
+  bottom: -3px;
+  position: absolute;
+  background-color: var(--branco);
+}
+
+.links li a:hover{
+  width: 50%;
+  height: 2px;
+}
+
+.links li a:hover::after{
+  width: 50%;
+  transition: width .3s;
+}
+
+.social ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.footerText {
+  color: var(--cinza-escuro);
+  font-family: var(--alata);
+  font-size: 1.2rem;
+}

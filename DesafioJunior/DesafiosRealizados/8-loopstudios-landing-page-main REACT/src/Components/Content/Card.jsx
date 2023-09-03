@@ -9,7 +9,7 @@ const Card = ({id, classe, titulo, image}) => {
   
   function handleMouseEnter() {
     setEfeitoCartao({
-      opacity: 0.5,
+      opacity: 0.3,
     });
   
     setEfeitoTituloCartao({
