@@ -1,0 +1,57 @@
+.bgMenu {
+  width: 0;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  background-color: var(--preto);
+  position: absolute;
+  z-index: 5000; 
+  overflow: hidden;
+  animation: animacaoMenu .3s forwards;
+}
+
+@keyframes animacaoMenu {
+  to{
+    width: 100%;
+  }
+}
+
+.headerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logoA {
+  text-decoration: none;
+  color: var(--branco);
+  font-family: var(--alata);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.imageX {
+  background: url('../../../public/images/mobile/icon-close.svg') no-repeat center;
+  background-size: contain;
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+}
+
+.Menu {
+  list-style: none;
+  position: absolute;
+  left: 22px;
+  top: 11rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Menu > li > a {
+  text-decoration: none;
+  color: var(--branco);
+  font-size: 2.2rem;
+  font-family: var(--josefin);
+}

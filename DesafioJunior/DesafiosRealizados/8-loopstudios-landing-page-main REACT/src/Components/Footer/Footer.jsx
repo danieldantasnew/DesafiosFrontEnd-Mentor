@@ -1,19 +1,13 @@
 import React from 'react';
 import style from './Footer.module.css';
+import Links from '../Links';
 
 const Footer = () => {
   return (
     <footer className={style.footer}>
       <h2 className={style.logoFooter}>loopstudios</h2>
-      <div className={style.links}>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Support</a></li>
-        </ul>
-      </div>
+
+      <Links/>
 
       <div className={style.social}>
           <ul>
