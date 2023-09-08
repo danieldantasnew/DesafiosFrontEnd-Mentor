@@ -9,7 +9,7 @@ const Menu = ({onClick}) => {
       <div className={style.imageX} onClick={onClick}></div>
       </div>
       <div className={style.Menu}>
-        <Links estilo={{textTransform: 'uppercase'}}/>
+        <Links estilo={{textTransform: 'uppercase', fontWeight: 500, fontFamily: 'var(--josefin)', fontSize: '1.3rem'}}/>
       </div>
     </section>
   )
