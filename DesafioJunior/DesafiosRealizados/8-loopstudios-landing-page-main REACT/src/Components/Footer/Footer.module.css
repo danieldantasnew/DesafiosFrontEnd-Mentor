@@ -1,12 +1,22 @@
 .footer {
   width: 100%;
+  padding: 2rem 0;
   background-color: var(--preto);
   display: grid;
-  grid-template-columns: repeat(2, 1fr ) ;
   justify-content: center;
-  gap: 12px;
-  text-align: center;
-  padding: 4.5rem 0;
+}
+
+.tamanhoMaximoFooter {
+  max-width: 965px;
+  display: grid;
+  grid-template-areas: 
+  "logo sociais"
+  "sobre direitos"
+  ;
+  justify-items: self-end;
+  align-items: flex-end;
+  column-gap: 166px;
+  row-gap: 16px;
 }
 
 .logoFooter {
@@ -15,6 +25,8 @@
   font-family: var(--alata);
   font-size: 1.5rem;
   font-weight: 600;
+  grid-area: logo;
+  justify-self: self-start;
 }
 
 .social ul {
@@ -24,23 +36,38 @@
   align-items: center;
   gap: 12px;
   cursor: pointer;
+  grid-area: sociais;
 }
 
 .footerText {
   color: var(--cinza-escuro);
   font-family: var(--alata);
-  font-size: 1.2rem;
+  font-size: 0.75rem;
+  grid-area: direitos;
+  justify-self: flex-end;
 }
 
 @media (max-width: 965px) {
   .footer {
-    display: grid;
-    grid-template-columns: 1fr;
+    padding: 4.5rem 0;
+  }
+
+  .tamanhoMaximoFooter {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 36px;
     text-align: center;
-    padding: 4.5rem 0;
+    height: 400px;
+  }
+
+  .logoFooter {
+    text-decoration: none;
+    color: var(--branco);
+    font-family: var(--alata);
+    font-size: 1.5rem;
+    font-weight: 600;
   }
 
   .social ul {
@@ -50,5 +77,9 @@
     align-items: center;
     gap: 12px;
     cursor: pointer;
+  }
+
+  .footerText {
+    font-size: 1.2rem;
   }
 }

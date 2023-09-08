@@ -32,7 +32,7 @@ function App() {
           <Header tamanho={bgHeader}/>
           <Content tamanho={bgHeader}/>
         </div>
-        <Footer/>
+        <Footer tamanho={bgHeader}/>
       </section>
     </>
   )
