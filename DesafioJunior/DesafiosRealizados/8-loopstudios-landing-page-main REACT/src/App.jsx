@@ -18,19 +18,19 @@ function App() {
   }
 
   useEffect(()=> {
-    tamanhoTela(600);
+    tamanhoTela(965);
   }, [])
 
   window.addEventListener('resize', ()=> {
-    tamanhoTela(600);
+    tamanhoTela(965);
   });
 
   return (
     <>
-      <section className={bgHeader ? style.bgHeader : style.bgHeaderDesktop}>
-        <div className={style.tamanhoMaxDesktop}>
+      <section className={style.bgHeader}>
+        <div className={style.tamanhoMax}>
           <Header tamanho={bgHeader}/>
-          <Content/>
+          <Content tamanho={bgHeader}/>
         </div>
         <Footer/>
       </section>

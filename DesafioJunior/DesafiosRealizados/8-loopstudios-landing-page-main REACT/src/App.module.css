@@ -21,18 +21,11 @@ html, body{
   --alata: 'Alata', sans-serif;
 }
 
-.tamanhoMaxDesktop {
-  max-width: 1200px;
+.tamanhoMax {
+  max-width: 950px;
 }
 
 .bgHeader {
-  background: url('../../../public/images/mobile/image-hero.jpg') no-repeat top;
-  background-size: cover;
-  width: 100%;
-  height: 60vh;
-}
-
-.bgHeaderDesktop {
   background: url('../../../public/images/desktop/image-hero.jpg') no-repeat top;
   background-size: cover;
   width: 100%;
@@ -41,4 +34,17 @@ html, body{
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
+}
+
+@media (max-width: 965px) {
+  .tamanhoMax {
+    width: 100%;
+  }
+
+  .bgHeader {
+    background: url('../../../public/images/mobile/image-hero.jpg') no-repeat top;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+  }
 }

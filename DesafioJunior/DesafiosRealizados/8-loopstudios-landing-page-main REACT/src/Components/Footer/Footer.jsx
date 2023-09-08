@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className={style.footer}>
       <h2 className={style.logoFooter}>loopstudios</h2>
 
-      <Links/>
+      <Links estiloDesktop={{display: 'flex', flexDirection: 'row'}}/>
 
       <div className={style.social}>
           <ul>

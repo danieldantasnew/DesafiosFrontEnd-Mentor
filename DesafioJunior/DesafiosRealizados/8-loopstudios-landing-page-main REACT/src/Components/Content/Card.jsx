@@ -1,8 +1,6 @@
 import React from 'react';
 
-
-
-const Card = ({id, classe, titulo, image}) => {
+const Card = ({id, classe, titulo, image, tamanho}) => {
 
   const [efeitoCartao, setEfeitoCartao] = React.useState(null);
   const [efeitoTituloCartao, setEfeitoTituloCartao] = React.useState(null);
@@ -14,7 +12,7 @@ const Card = ({id, classe, titulo, image}) => {
   
     setEfeitoTituloCartao({
       color: 'var(--preto)',
-    })
+    });
   }
   
   function handleMouseLeave() {
@@ -29,7 +27,7 @@ const Card = ({id, classe, titulo, image}) => {
 
   return (
     <div key={id} className={classe} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
-      <img style={{...efeitoCartao}} src={`../../../public/images/mobile/${image}.jpg`} alt={titulo} />
+      <img style={{...efeitoCartao}} src={tamanho ? `../../../public/images/mobile/${image}.jpg` : `../../../public/images/desktop/${image}.jpg`} alt={titulo} />
       <h3 style={{...efeitoTituloCartao}}>{titulo}</h3>
     </div>
   )

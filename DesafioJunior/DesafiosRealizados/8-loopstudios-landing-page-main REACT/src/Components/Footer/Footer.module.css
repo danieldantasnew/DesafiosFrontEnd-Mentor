@@ -2,10 +2,9 @@
   width: 100%;
   background-color: var(--preto);
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr ) ;
   justify-content: center;
-  align-items: center;
-  gap: 36px;
+  gap: 12px;
   text-align: center;
   padding: 4.5rem 0;
 }
@@ -17,8 +16,6 @@
   font-size: 1.5rem;
   font-weight: 600;
 }
-
-
 
 .social ul {
   list-style: none;
@@ -33,4 +30,25 @@
   color: var(--cinza-escuro);
   font-family: var(--alata);
   font-size: 1.2rem;
+}
+
+@media (max-width: 965px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    text-align: center;
+    padding: 4.5rem 0;
+  }
+
+  .social ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+  }
 }

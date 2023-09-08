@@ -1,4 +1,3 @@
-import React from 'react';
 import style from './Links.module.css';
 
 const Links = ({estilo, estiloDesktop}) => {

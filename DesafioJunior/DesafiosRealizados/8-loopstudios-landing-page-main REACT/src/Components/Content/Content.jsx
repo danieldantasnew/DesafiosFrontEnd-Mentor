@@ -1,7 +1,7 @@
 import style from './Content.module.css';
 import Card from './Card';
 
-const Content = () => {
+const Content = ({tamanho}) => {
 
   const creations = [
     {
@@ -46,8 +46,6 @@ const Content = () => {
     },
   ]
 
-
-
   return (
     <>
       <div className={style.firstContent}>
@@ -58,12 +56,19 @@ const Content = () => {
         </div>
 
         <div className={style.creations}>
-          <h2>Our Creations</h2>
-          {creations && creations.map((creation) => <Card key={creation.id} id={creation.id} classe={style.imagesCreation} titulo={creation.titulo} image={creation.image}/>
-          )}
+          {tamanho && <h2>Our Creations</h2>}
+          {!tamanho && <div className={style.organizaCreationText}>
+            <h2>Our Creations</h2> 
+          <button className={style.buttonCreation}>See All</button>
+          </div>}
+
+          <div className={style.cards}>
+            {creations && creations.map((creation) => <Card key={creation.id} id={creation.id} classe={style.imagesCreation} titulo={creation.titulo} image={creation.image} tamanho={tamanho}/>
+            )}
+          </div>
         </div>
 
-        {creations && <button className={style.buttonCreation}>See All</button>}
+        {creations && tamanho && <button className={style.buttonCreation}>See All</button>}
       </div>
     </>
   )

@@ -43,7 +43,7 @@
   width: 80%;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 965px) {
   .header {
     height: 55vh;
     width: 100%;
