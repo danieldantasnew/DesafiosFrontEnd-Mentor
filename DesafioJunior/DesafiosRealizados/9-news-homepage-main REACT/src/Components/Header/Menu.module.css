@@ -1,0 +1,30 @@
+.menu {
+  position: absolute;
+  width: 0;
+  height: 100vh;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  animation: animaMenu .3s forwards;
+  background-color: var(--branco-apagado);
+  z-index: 5000;
+  overflow: hidden;
+}
+
+@keyframes animaMenu {
+  to {
+    width: 77%;
+    opacity: 1;
+  }
+}
+
+.close {
+  background: url('../../../public/assets/images/icon-menu-close.svg') no-repeat center;
+  background-size: contain;
+  width: 34px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  cursor: pointer;
+}
