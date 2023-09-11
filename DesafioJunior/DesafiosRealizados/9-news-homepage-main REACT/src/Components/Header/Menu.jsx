@@ -6,7 +6,7 @@ import Links from '../Links/Links.jsx';
 const Menu = ({onClick}) => {
   return (
     <>
-      <Modal />
+      <Modal onClick={onClick}/>
       <div className={style.menu}>
         <div className={style.close} onClick={onClick}></div>
         <Links/>
