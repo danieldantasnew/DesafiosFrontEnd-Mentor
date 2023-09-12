@@ -41,8 +41,13 @@
 .contentCenter {
   background-color: var(--azul-muito-escuro);
   padding: 10px;
+  margin: 12px 0;
 }
 
 .contentCenter h1 {
   color: var(--laranja-leve);
+}
+
+.contentBottom {
+  margin: 12px 0;
 }

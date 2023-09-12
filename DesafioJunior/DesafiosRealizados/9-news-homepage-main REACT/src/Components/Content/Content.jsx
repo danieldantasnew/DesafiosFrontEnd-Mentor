@@ -1,6 +1,6 @@
-import React from 'react';
 import style from './Content.module.css';
 import News from './News';
+import Topics from './Topics';
 
 const Content = () => {
 
@@ -22,6 +22,26 @@ const Content = () => {
     },
   ]
 
+  const topics = [
+    {
+      id: 1,
+      titulo: 'Reviving Retro PCs',
+      descricao: 'What happens when old PCs are given modern upgrades?',image: 'image-retro-pcs',
+    },
+    {
+      id: 2,
+      titulo: 'Top 10 Laptops of 2022',
+      descricao: 'Our best picks for various needs and budgets.',
+      image: 'image-top-laptops',
+    },
+    {
+      id: 3,
+      titulo: 'The Growth of Gaming',
+      descricao: 'How the pandemic has sparked fresh opportunities.',
+      image: 'image-gaming-growth',
+    },
+  ]
+
   return (
     <div>
       <div className={style.contentTop}>
@@ -33,11 +53,13 @@ const Content = () => {
 
       <div className={style.contentCenter}>
         <h1>New</h1>
-        {news.map((newsletter) => <News key={newsletter.id} id={newsletter.id} titulo={newsletter.titulo} descricao={newsletter.descricao}/>)}
+        {news.map((newsletter, index) => <News key={newsletter.id} id={newsletter.id} titulo={newsletter.titulo} descricao={newsletter.descricao} ultimo={index === news.length-1}/>)}
+      </div>
+
+      <div className={style.contentBottom}>
+        {topics.map((topic)=> <Topics key={topic.id} number={"0"+topic.id} titulo={topic.titulo} descricao={topic.descricao} image={`../../../public/assets/images/${topic.image}.jpg`}/>)}
       </div>
     </div>
-
-    
   )
 }
 
