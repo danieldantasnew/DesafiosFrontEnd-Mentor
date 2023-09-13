@@ -1,30 +1,53 @@
+.contentMain {
+  display: grid;
+  grid-template-areas: 
+  "topo topo centro"
+  "topo topo centro"
+  "baixo baixo baixo"
+  ;
+  gap: 24px;
+}
+
 .contentTop {
-  margin-bottom: 12px;
+  margin-bottom: 0;
+  grid-area: topo;
+  display: grid;
+  grid-template-areas: 
+  "imagem imagem imagem"
+  "titulo texto texto"
+  "titulo botao botao";
+  gap: 20px;
 }
 
 .imageContent {
    background: url('../../../public/assets/images/image-web-3-mobile.jpg') no-repeat center;
-   background-size: contain;
+   background-size: cover;
    height: 300px;
    width: 100%;
-   margin-bottom: 20px;
+   margin-bottom: 0;
+   grid-area: imagem;
 }
 
 .contentTop h2 {
-  font-size: 1.6rem;
+  font-size: 2.8rem;
   color: var(--azul-muito-escuro);
-  margin-bottom: 10px;
+  margin-bottom: 0;
+  grid-area: titulo;
 }
 
 .contentTop p {
   color: var(--azul-escuro-acinzentado);
   font-size: 1rem;
+  line-height: 22px;
+  grid-area: texto;
 }
 
 .contentTop button {
   cursor: pointer;
+  width: 48%;
+  height: 40px;
   padding: 12px 38px;
-  margin: 2vh 0;
+  margin: 0;
   font-size: 0.7rem;
   font-weight: 600;
   background-color: var(--vermelho-leve);
@@ -32,6 +55,8 @@
   border: none;
   letter-spacing: 3px;
   text-transform: uppercase;
+  grid-area: botao;
+  align-self: flex-end;
 }
 
 .contentTop button:hover {
@@ -40,14 +65,73 @@
 
 .contentCenter {
   background-color: var(--azul-muito-escuro);
-  padding: 10px;
-  margin: 12px 0;
+  padding: 18px;
+  margin: 0;
+  grid-area: centro;
 }
 
 .contentCenter h1 {
   color: var(--laranja-leve);
+  font-size: 2rem;
+  margin: 0px 0px 24px 0px;
 }
 
 .contentBottom {
-  margin: 12px 0;
+  margin: 0;
+  grid-area: baixo;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+
+@media (max-width: 375px) {
+  .imageContent {
+    background-size: contain;
+ }
+}
+
+@media (max-width: 1000px) {
+  .contentMain {
+    display: flex;
+    flex-direction: column;
+    grid-template-areas: none;
+  }
+
+ .contentCenter {
+    margin: 12px 0;
+  }
+
+  .contentBottom {
+    grid-area: baixo;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contentTop {
+    display: block;
+  }
+
+  .imageContent {
+    margin-bottom: 20px;
+ }
+
+ .contentTop h2 {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+  }
+
+  .contentTop p {
+    font-size: 1rem;
+  }
+
+  .contentTop button {
+    margin: 2vh 0;
+    width: auto;
+  }
+
+  .contentCenter h1 {
+    font-size: 1.4rem;
+    margin: 0;
+  }
 }

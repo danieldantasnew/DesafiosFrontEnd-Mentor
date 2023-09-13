@@ -1,7 +1,7 @@
 .titulo {
   color: var(--branco-apagado);
   margin: 12px 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
@@ -13,6 +13,16 @@
   color: var(--azul-escuro-acinzentado);
   padding-bottom: 24px;
   border-bottom: 1px solid var(--azul-escuro-acinzentado);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
+}
+
+@media (max-width: 1000px) {
+  .titulo {
+    font-size: 1rem;
+  }
+
+  .descricao {
+    font-size: 0.9rem;
+  }
 }

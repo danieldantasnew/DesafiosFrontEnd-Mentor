@@ -1,9 +1,10 @@
 .content {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-auto-rows: 100%;
   gap: 8px;
   margin: 32px 0;
-  max-height: 180px;
+  max-height: 130px;
 }
 
 .image{
@@ -14,7 +15,8 @@
 .info {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 2px;
+  justify-content: space-between;
 }
 
 .info h1 {
@@ -36,4 +38,10 @@
   color: var(--azul-escuro-acinzentado);
   font-size: 0.9rem;
   line-height: 24px;
+}
+
+@media (max-width: 1000px) {
+  .content {
+    max-height: 180px;
+  }
 }

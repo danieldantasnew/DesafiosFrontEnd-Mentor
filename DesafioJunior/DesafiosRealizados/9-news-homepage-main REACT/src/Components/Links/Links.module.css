@@ -1,7 +1,9 @@
 .links {
+  display: flex;
+  flex-direction: row;
   list-style: none;
-  margin: 10vh 20px;
   font-family: var(--inter);
+  margin: 2vh 0;
 }
 
 .links li {
@@ -11,10 +13,31 @@
 .links li a {
   text-transform: capitalize;
   text-decoration: none;
-  font-size: 1.3rem;
-  color: var(--azul-muito-escuro);
+  font-size: 1rem;
+  color: var(--azul-escuro-acinzentado);
 }
 
 .links li a:hover {
-  color: var(--laranja-leve);
+  color: var(--vermelho-leve);
+}
+
+.links li:last-child {
+  padding: 8px 0px 8px 8px;
+}
+
+@media (max-width: 1000px) {
+  .links{
+    display: flex;
+    flex-direction: column;
+    margin: 10vh 20px;
+  }
+
+  .links li a {
+    font-size: 1.3rem;
+    color: var(--azul-muito-escuro);
+  }
+
+  .links li:last-child {
+    padding: 8px;
+  }
 }

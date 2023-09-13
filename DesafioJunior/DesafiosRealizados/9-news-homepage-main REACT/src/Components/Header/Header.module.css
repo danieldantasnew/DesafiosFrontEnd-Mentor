@@ -10,8 +10,8 @@
 .logo {
   background: url('../../../public/assets/images/logo.svg') no-repeat center;
   background-size: contain;
-  height: 28px;
-  width: 32px;
+  height: 32px;
+  width: 44px;
 }
 
 .buttonMenu {
@@ -20,4 +20,11 @@
   width: 28px;
   height: 16px;
   cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .logo {
+    height: 28px;
+    width: 32px;
+  }
 }

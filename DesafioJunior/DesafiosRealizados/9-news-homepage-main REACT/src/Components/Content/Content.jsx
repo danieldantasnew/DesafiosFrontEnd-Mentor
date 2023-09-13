@@ -43,7 +43,7 @@ const Content = () => {
   ]
 
   return (
-    <div>
+    <section className={style.contentMain}>
       <div className={style.contentTop}>
         <div className={style.imageContent}></div>
         <h2>The Bright Future of Web 3.0?</h2>
@@ -59,7 +59,7 @@ const Content = () => {
       <div className={style.contentBottom}>
         {topics.map((topic)=> <Topics key={topic.id} number={"0"+topic.id} titulo={topic.titulo} descricao={topic.descricao} image={`../../../public/assets/images/${topic.image}.jpg`}/>)}
       </div>
-    </div>
+    </section>
   )
 }
 
